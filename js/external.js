@@ -18,13 +18,15 @@ var amazon = prompt('input your amazon pay');
 var total = (google * 6) + (facebook * 10) + (amazon * 4);
 alert('Your total pay is ' + total + ' bucks');
 
+// Not sure this actually works, think I need to re-visit my approach
 var classTotal = prompt('How many students are in the classroom?');
 var fullClassTotal = prompt('whats the max number of students allowed in the classroom?');
-var studentSchedule = ['Saturday', 'Sunday']
-var classSchedule = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
+var studentSchedule = ['Saturday', 'Sunday'];
+var classSchedule = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
 var canAttend = studentSchedule != classSchedule && fullClassTotal > classTotal;
 console.log(canAttend);
 
+// Pretty sure this works right, will re-visit later
 var item = prompt('How many items are you buying?');
 var productOffer = item > 2;
 var premium = confirm('Are you a premium member?');
