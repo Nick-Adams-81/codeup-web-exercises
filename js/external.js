@@ -25,8 +25,8 @@ var classSchedule = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
 var canAttend = studentSchedule != classSchedule && fullClassTotal > classTotal;
 console.log(canAttend);
 
-var item = 1;
+var item = prompt('How many items are you buying?');
 var productOffer = item > 2;
-var premium = item >= 1;
+var premium = confirm('Are you a premium member?');
 console.log(productOffer, premium);
 
