@@ -12,18 +12,18 @@
     <button id="btn">Push Me!!!</button>
 <script>
     // getting the btn(button) element from the html
-    let btn = document.getElementById('btn')
+    let btn = document.getElementById('btn');
     //adding the event listener to the btn variable
     btn.addEventListener('click', function() {
-        let name = prompt('What is Your name?')
+        let name = prompt('What is Your name?');
         // string concatenation
-        alert('Nice to meet you ' + name)
-        let sport = prompt('What is your favorite sport ' + name + '?')
+        alert('Nice to meet you ' + name);
+        let sport = prompt('What is your favorite sport ' + name + '?');
         // template literals using back ticks
-        alert(`I love ${sport} too ${name}!!!`)
-        let food = prompt(`What is your favorite food ${name}`)
-        alert(`So you like ${food} and your favorite sport is ${sport}, ${name}?`)
-        alert(`Very nice to get to know you ${name}, we should go grab some ${food} sometime at a ${sport} game!!!`)
+        alert(`I love ${sport} too ${name}!!!`);
+        let food = prompt(`What is your favorite food ${name}`);
+        alert(`So you like ${food} and your favorite sport is ${sport}, ${name}?`);
+        alert(`Very nice to get to know you ${name}, we should go grab some ${food} sometime at a ${sport} game!!!`);
     })
 </script>
 <script src="js/external.js"></script>
