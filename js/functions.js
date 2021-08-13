@@ -1,5 +1,4 @@
 "use strict";
-
 /**
  * TODO:
  * Create a function called 'sayHello' that takes a parameter 'name'.
@@ -80,12 +79,12 @@ console.log(calculateTip(0.25, 25.50));
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-// var bill = prompt('Whats your bill total?')
-// alert('your bill is ' + bill)
-// var tip = prompt('what percentage would you like to tip?')
-// alert('Your tipping ' + tip + ' percent?')
-// var tipTotal = calculateTip(bill, tip / 100)
-// alert('Your tip total is ' + tipTotal)
+var bill = prompt('Whats your bill total?')
+alert('your bill is ' + bill)
+var tip = prompt('what percentage would you like to tip?')
+alert('Your tipping ' + tip + ' percent?')
+var tipTotal = calculateTip(bill, tip / 100)
+alert('Your tip total is ' + tipTotal)
 /**
  * TODO:
  * Create a function named `applyDiscount`. This function should accept a price
