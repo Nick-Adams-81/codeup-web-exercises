@@ -10,7 +10,7 @@ var a = prompt('How long would you like to rent the Little Mermaid?');
 var b = prompt('How long are you renting Brother Bear for?');
 var c = prompt('Hercules huh? How many days are you renting it for?');
 var sum = ((a * 3) + (b * 3) + (c * 3));
-alert('Your total rental fees will be ' + sum + " bucks.");
+alert('Your total rental fees will be ' + sum + ' bucks.');
 
 var google = prompt('input your google pay');
 var facebook = prompt('input your facebook pay');
@@ -21,9 +21,9 @@ alert('Your total pay is ' + total + ' bucks');
 // Not sure this actually works, think I need to re-visit my approach
 var classTotal = prompt('How many students are in the classroom?');
 var fullClassTotal = prompt('whats the max number of students allowed in the classroom?');
-var studentSchedule = ['Saturday', 'Sunday'];
-var classSchedule = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
-var canAttend = studentSchedule != classSchedule && fullClassTotal > classTotal;
+var studentSchedule = 'Saturday, Sunday';
+var classSchedule = 'Monday, Tuesday, Wednesday, Thursday, Friday';
+var canAttend = studentSchedule !== classSchedule && fullClassTotal > classTotal;
 console.log(canAttend);
 
 // Pretty sure this works right, will re-visit later
