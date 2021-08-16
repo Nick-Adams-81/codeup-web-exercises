@@ -66,11 +66,6 @@
         default:
             alert(pizzaPref + ' isn\'t my fav but not judging');
             break;
-
     }
-
-
-
-
 
 })();
