@@ -163,6 +163,8 @@
      * Can you refactor your code to use functions?
      * HINT: The way we prompt for a value could be improved
      */
+
+    // function  to check if the input is positive or negative
     function positiveOrNegative(x) {
         if(num >= 0) {
             alert('your number is positive');
@@ -173,7 +175,9 @@
         }
     }
 
-
+    function plusOneHundred(x) {
+        alert('your number is ' + numPlusOneHundred + " when added with 100");
+    }
 
     var numberConfirm = confirm('would you like to enter a number?');
     if(numberConfirm) {
@@ -182,17 +186,16 @@
        var numPlusOneHundred = newNum + 100;
        if(isNaN(newNum)) {
            alert('That isn\'t a number');
-       } else if(num % 2 == 0) {
+       } else if(num % 2 === 0) {
            alert('your number is even');
-           alert('your number is ' + numPlusOneHundred + " when added with 100");
+           plusOneHundred(numPlusOneHundred);
            positiveOrNegative(num);
        } else {
            alert('your number is odd');
-           alert('your number is ' + numPlusOneHundred + " when added with 100");
+           plusOneHundred(numPlusOneHundred);
            positiveOrNegative(num);
-
        }
     } else {
         alert('please return to enter a number');
     }
-})()
+})();
