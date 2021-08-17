@@ -86,9 +86,9 @@ console.log('---------------');
 console.log(doTimesTwo(userNum));
 // For loops: Loops that are designed to run a given number of times. Think more math thinking.
 
-// for (var incrementer = 1; incrementer <= 10; incrementer++) {
-//     console.log("This loop has run " + incrementer + " time(s).");
-// }
+for (var incrementer = 1; incrementer <= 10; incrementer++) {
+    console.log("This loop has run " + incrementer + " time(s).");
+}
 
 // The for loop has more to it as you can see. Let's break down the arguments:
 
