@@ -121,11 +121,10 @@
                 break;
             case 4:
                 return totalAmmount * 0.5;
-                break
+                break;
             case 5:
                 return totalAmmount - totalAmmount;
                 break;
-
         }
 
     }
@@ -175,6 +174,7 @@
         }
     }
 
+    // function to add 100 to the inputted number
     function plusOneHundred(x) {
         alert('your number is ' + numPlusOneHundred + " when added with 100");
     }
