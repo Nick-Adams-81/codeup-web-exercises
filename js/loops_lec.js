@@ -79,11 +79,11 @@ function whileTimesTwo(num) {
 
 }
 
-var userNum = parseInt(prompt('Give me a number'));
+//var userNum = parseInt(prompt('Give me a number'));
 
-console.log(whileTimesTwo(userNum));
-console.log('---------------');
-console.log(doTimesTwo(userNum));
+// console.log(whileTimesTwo(userNum));
+// console.log('---------------');
+// console.log(doTimesTwo(userNum));
 // For loops: Loops that are designed to run a given number of times. Think more math thinking.
 
 for (var incrementer = 1; incrementer <= 10; incrementer++) {
@@ -100,14 +100,27 @@ for (var incrementer = 1; incrementer <= 10; incrementer++) {
 
 // Once again, we can use this in a function.
 
+function sayHello(num) {
+    for(num; num >= 0; num--) {
+        if(num % 5 === 0) {
+            console.log('howdy! our current number is ' + num);
+        } else {
+            console.log('hello! our current number is ' + num);
+        }
+    }
+}
+
+console.log(sayHello(16));
+
+
 // And we can use this with conditionals!
 
-// for (var i = 1; i < 25; i++){
-//     if (i % 6 == 0) console.log("Codeup");
-//     else if (i % 2 == 0) console.log("Code");
-//     else if (i % 3 == 0) console.log("Up");
-//     else console.log(i);
-// }
+for (var i = 1; i <= 25; i++){
+    if (i % 6 === 0) console.log("Codeup");
+    else if (i % 2 === 0) console.log("Code");
+    else if (i % 3 === 0) console.log("Up");
+    else console.log(i);
+}
 
 // TODO: Quasar, how would we refactor the above back into a WHILE loop as we saw earlier?
 
