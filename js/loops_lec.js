@@ -60,11 +60,30 @@ if(i = 10) {
 
 // Notice that even with a condition that has a boolean value of false, the do while loop will run one time be for stopping.
 
+// do while loop(do runs at least once while condition is not met)
 
 
 // We can also use what we've learned above within the body of your functions:
+function doTimesTwo(num) {
+    do {
+        num = num * 2;
+        console.log(num);
+    } while ( num < 100);
+}
 
+function whileTimesTwo(num) {
+    while(num < 100) {
+        num = num * 2;
+        console.log(num);
+    }
 
+}
+
+var userNum = parseInt(prompt('Give me a number'));
+
+console.log(whileTimesTwo(userNum));
+console.log('---------------');
+console.log(doTimesTwo(userNum));
 // For loops: Loops that are designed to run a given number of times. Think more math thinking.
 
 // for (var incrementer = 1; incrementer <= 10; incrementer++) {
