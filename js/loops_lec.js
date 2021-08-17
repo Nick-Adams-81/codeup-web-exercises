@@ -37,7 +37,7 @@ while(i < 10) {
 if(i = 10) {
     console.log(i + " is ten!");
 }
-
+//test
 //~*~ Do-While Loops ~*~
 
 
