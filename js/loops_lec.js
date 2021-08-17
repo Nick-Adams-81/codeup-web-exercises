@@ -110,34 +110,41 @@ function sayHello(num) {
     }
 }
 
-console.log(sayHello(16));
+//console.log(sayHello(16));
 
 
 // And we can use this with conditionals!
 
-for (var i = 1; i <= 25; i++){
-    if (i % 6 === 0) console.log("Codeup");
-    else if (i % 2 === 0) console.log("Code");
-    else if (i % 3 === 0) console.log("Up");
-    else console.log(i);
-}
+// for (var i = 1; i <= 25; i++){
+//     if (i % 6 === 0) console.log("Codeup");
+//     else if (i % 2 === 0) console.log("Code");
+//     else if (i % 3 === 0) console.log("Up");
+//     else console.log(i);
+// }
 
 // TODO: Quasar, how would we refactor the above back into a WHILE loop as we saw earlier?
-
+// var i = 1;
+// while(i <= 25) {
+//     if(i % 6 === 0) console.log('Codeup!');
+//     else if(i % 2 === 0) console.log('Code');
+//     else if(i % 3 === 0) console.log('Up');
+//     else console.log(i);
+//     i++;
+// }
 // Below is a funky example that works, but will rely on moving between different data types.
 // for (var i = "A"; i.length < 8; i = i + "A") {
-//     console.log("This is a bit of a tricky way to run a for loop, but hey, it works...");
+//     console.log("This is a bit of a tricky way to run a for loop, but hey, it works... this os what i looks like " + i);
 // }
 
 // We can get a loop to stop using break;
 
-// var x = 0;
+ //var x = 0;
 //
 // while (true) {
 //     alert("This is the song that never ends. It just goes on and on my friends. Somebody started singing not knowing what it was, and now we'll all just keep on singing this because");
 //     x++;
 //     if (x === 5) {
-//         alert("LambChop, cut it out!!")
+//         alert("LambChop, cut it out!!");
 //         break;
 //     }
 // }
