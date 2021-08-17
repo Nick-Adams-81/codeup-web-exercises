@@ -150,12 +150,12 @@ function sayHello(num) {
 // }
 
 
-// for (var j = 5; j < 100000; j += 5) {
-//     if (j === 25) {
-//         break;
-//     }
-//     console.log(j);
-// }
+for (var j = 5; j < 100000; j += 5) {
+    if (j === 25) {
+        break;
+    }
+    console.log(j);
+}
 
 // Notice that by having the break, we're able to get out of the loop that would otherwise run forever.
 
