@@ -35,9 +35,9 @@ function findGeneration(x, y) {
             break;
         case -2:
             if(y === 'm') {
-                return 'grandfather';
+                return 'grand father';
             } else if(y === 'f') {
-                return 'grandmother';
+                return 'grand mother';
             }
             break;
         case -1:
@@ -59,7 +59,7 @@ function findGeneration(x, y) {
             break;
         case 2:
             if(y === 'm') {
-                return 'grandson';
+                return 'grand son';
             } else if(y === 'f') {
                 return 'grand daughter';
             }
@@ -71,12 +71,11 @@ function findGeneration(x, y) {
                 return 'great grand daughter';
             }
             break;
-
     }
 
 }
 
-    console.log(findGeneration(-3, 'f'));
+    console.log(findGeneration(-2, 'm'));
 
 
     /* Say "Hello" Say "Bye"
@@ -90,9 +89,16 @@ function findGeneration(x, y) {
      * Notes
      * The name you return must be capitalized.
      */
+    function sayHelloBye(name, num) {
+        if(num === 1) {
+            return 'Hello ' + name.toUpperCase();
+        } else {
+            return 'Goodbye ' + name.toUpperCase();
+        }
 
+    }
 
-
+    console.log(sayHelloBye('nick', 1));
 
 
     /* Tile Teamwork Tactics
@@ -113,7 +119,15 @@ function findGeneration(x, y) {
 
     function possibleBonus(a, b) {
         // write your code here
+        if(b - a <= 6 && b > a) {
+            return true;
+        } else {
+            return false;
+        }
+
     }
+
+    console.log(possibleBonus(5, 12));
 
     /* Integer in Range?
      * Create a function that validates whether a number n is within the bounds of lower and upper. Return false if n is not an integer.
@@ -131,8 +145,15 @@ function findGeneration(x, y) {
 
     function intWithinBounds(n, lower, upper) {
         // write your code here
+        if(n >= lower && n < upper) {
+            return true;
+        } else {
+            return false;
+        }
+
     }
 
+    console.log(intWithinBounds(3, 2, 7));
 
     /* Perimeters with a Catch
      * Write a function that takes a number and returns the perimeter of either a circle or a square. The input will be in the form (letter l, number num) where the letter will be either "s" for square, or "c" for circle, and the number will be the side of the square or the radius of the circle.
