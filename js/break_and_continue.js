@@ -18,12 +18,13 @@
     }
     // looping through continuing past user input.
     for(var j = 1; j < 50; j++) {
-        if(j == number) {
+        if(j % 2 === 0) {
             continue;
 
-        } else if(j % 2 !== 0) {
-            console.log('your number is:' + j);
-
+        }else if(j == number) {
+            console.log('Wer\'e gonna skip this number: ' + j);
+        } else {
+            console.log('current number: ' + j);
         }
 
     }
