@@ -21,4 +21,4 @@
     } while(conesToSell > 0);
     console.log('You sold all the cones');
 
-})()
+})();

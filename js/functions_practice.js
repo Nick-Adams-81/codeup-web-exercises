@@ -175,4 +175,10 @@ function findGeneration(x, y) {
      * >> perimeter("c", 4) ➞ 25.12
      * >> perimeter("c", 9) ➞ 56.52
      */
+
+    function perimeter(letter, num) {
+
+    }
+
+
 })()

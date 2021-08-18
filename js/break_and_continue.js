@@ -7,8 +7,7 @@
     var number = prompt('Please pick an odd number between 1 and 50');
     for(var i = 1; i < 50; i++) {
         if(number % 2 === 0) {
-            var newNum = prompt('please pick an odd number');
-            alert('your number is ' + newNum);
+            alert('please pick an odd number');
             break;
         } else {
             alert('your number is ' + number);
@@ -17,12 +16,12 @@
 
     }
     // looping through continuing past user input.
-    console.log('Number to skip is: ' + number || newNum);
+    console.log('Number to skip is: ' + number);
     for(var j = 1; j < 50; j++) {
         if(j % 2 === 0) {
             continue;
         } else if(j == number) {
-            console.log('Wer\'e gonna skip this number: ' + j);
+            console.log('We\'re gonna skip this number: ' + j);
         } else {
             console.log('current number: ' + j);
         }
