@@ -21,6 +21,7 @@
         }
 
         // loop that adds a symbol based on what iteration you are in.
+        // still needs work, almost got it but need to figure out how to get the numbers to iterate.
 
         for(var i = '1'; i.length < 10; i = i + '1') {
             var result = parseInt(i)
@@ -29,23 +30,11 @@
         }
 
         // for loop that counts down from 100 and skips every 5 numbers
-    for(let i = 100; i > 0; i--) {
-        if(i % 5 === 0) {
-            console.log(i)
+        for(let i = 100; i > 0; i--) {
+            if(i % 5 === 0) {
+                console.log(i)
+            }
         }
-    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
 })()
