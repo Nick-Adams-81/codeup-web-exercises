@@ -10,7 +10,7 @@
             var newNum = prompt('please pick an odd number');
             alert('your number is ' + newNum);
             break;
-        }else  {
+        } else {
             alert('your number is ' + number);
             break;
         }
