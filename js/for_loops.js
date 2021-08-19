@@ -8,8 +8,7 @@
             console.log(number * i);
         }
     }
-
-    console.log(showMultiplicationTable(9));
+    console.log(showMultiplicationTable(7));
 
     // loop finding ten random numbers and tells us if that number is even or odd.
 

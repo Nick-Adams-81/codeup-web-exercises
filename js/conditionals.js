@@ -22,10 +22,29 @@
      * console.logging the function's return value
      */
     function analyzeColor(string) {
-        return string + ' is my favorite color too!'
+        var msg;
+        if(string === 'red') {
+            msg = 'Strawberries are red';
+        } else if(string === 'orange') {
+            msg = 'The sun is orange';
+        } else if(string === 'yellow') {
+            msg = 'Yellow is bright';
+        } else if(string === 'green') {
+            msg = 'Green is my fav!!!';
+        } else if(string === 'blue') {
+            msg = 'Blue is the color of water';
+        } else if(string === 'indigo') {
+            msg = 'indigo? is that a real color?';
+        } else if(string === 'violet') {
+            msg = 'violet is basically purple';
+        } else {
+            msg = 'please pick a valid color';
+        }
+        return msg;
+
     }
 
-     console.log(analyzeColor('blue'));
+     console.log(analyzeColor('red'));
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
@@ -60,7 +79,7 @@
                 alert('green is my fav!!!');
                 break;
             case 'blue':
-                alert('blue is the color of water');
+                alert('blue is the color of the sky');
                 break;
             case 'indigo':
                 alert('indigo? you mean purple?');
@@ -69,13 +88,13 @@
                 alert('violet is a nice color');
                 break;
             default:
-                alert('pick a color please');
+                alert('pick a valid color please');
                 break;
 
         }
     }
 
-    //analyzeColor2(randomColor)
+    analyzeColor2(randomColor)
     /**
      * TODO:
      * Prompt the user for a color when the page loads, and pass the input from the
@@ -163,7 +182,7 @@
      * HINT: The way we prompt for a value could be improved
      */
 
-    // function  to check if the input is positive or negative
+    //function  to check if the input is positive or negative
     function positiveOrNegative(x) {
         if(num >= 0) {
             alert('your number is positive');
