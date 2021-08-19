@@ -176,9 +176,9 @@
 
     //function  to check if the input is positive or negative
     function positiveOrNegative(number) {
-        if(num >= 0) {
+        if(newNum >= 0) {
             alert('your number is positive');
-        } else if(num < 0) {
+        } else if(newNum < 0) {
             alert('your number is negative');
         }
     }
@@ -187,11 +187,11 @@
     function plusOneHundred(number) {
         alert('your number is ' + numPlusOneHundred + " when added with 100");
     }
-
+    // Asking the user if they want to input a number
     var numberConfirm = confirm('would you like to enter a number?');
     if(numberConfirm) {
        var num = prompt('please enter a number');
-       var newNum = parseInt(num);
+       var newNum = Number(num);
        var numPlusOneHundred = newNum + 100;
        if(isNaN(newNum)) {
            alert('That isn\'t a number');
