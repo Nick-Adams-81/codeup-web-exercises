@@ -6,7 +6,7 @@
      * Create an array of 4 people's names and store it in a variable called
      * 'names'.
      */
-    var names = ['Nick', 'Jenny', 'Chris', 'Walt'];
+    var names = ['Nick', 'Jenny', 'Chris', 'Walt', 'Brian', 'hal-9000'];
     /**
      * TODO:
      * Create a log statement that will log the number of elements in the names
@@ -64,6 +64,13 @@
     function third(input) {
         return input[2];
     }
-
     console.log(third(names));
+
+    function last(input) {
+        return input[input.length -1];
+    }
+
+    console.log(last(names));
+
+
 })();
