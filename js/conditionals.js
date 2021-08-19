@@ -41,10 +41,9 @@
             msg = 'please pick a valid color';
         }
         return msg;
-
     }
 
-     console.log(analyzeColor('red'));
+     //console.log(analyzeColor('red'));
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
@@ -57,7 +56,7 @@
      * Pass the `randomColor` variable to your function and console.log the results.
      * You should see a different message every time you refresh the page
      */
-    console.log(analyzeColor(randomColor));
+    //console.log(analyzeColor(randomColor));
 
     /**
      * TODO:
@@ -67,7 +66,7 @@
     function analyzeColor2(str) {
         switch (str) {
             case 'red':
-                alert('red is a cool color but not my fav');
+                alert('Strawberries are red');
                 break;
             case 'orange':
                 alert('orange is too bright for me...');
@@ -90,11 +89,10 @@
             default:
                 alert('pick a valid color please');
                 break;
-
         }
     }
 
-    analyzeColor2(randomColor)
+    //analyzeColor2(randomColor)
     /**
      * TODO:
      * Prompt the user for a color when the page loads, and pass the input from the
@@ -102,7 +100,7 @@
      * function to show it to the user.
      */
      var userColor = prompt('pick your favorite color');
-    analyzeColor2(userColor);
+    //analyzeColor2(userColor);
     /* ########################################################################## */
 
     /**
@@ -128,29 +126,23 @@
         switch(luckyNumber) {
             case 0:
                 return totalAmmount;
-                break;
             case 1:
                 return totalAmmount * 0.9;
-                break;
             case 2:
                 return totalAmmount * 0.75;
-                break;
             case 3:
                 return totalAmmount * 0.65;
-                break;
             case 4:
                 return totalAmmount * 0.5;
-                break;
             case 5:
                 return totalAmmount - totalAmmount;
-                break;
         }
 
     }
 
-    console.log(calculateTotal(0, 100)); // returns 100
-    console.log(calculateTotal(4, 100)); // returns 50
-    console.log(calculateTotal(5, 100)); // returns 0
+    // console.log(calculateTotal(0, 100)); // returns 100
+    // console.log(calculateTotal(4, 100)); // returns 50
+    // console.log(calculateTotal(5, 100)); // returns 0
 
     /**
      * TODO:
@@ -162,8 +154,8 @@
 // Generate a random number between 0 and 6
     var luckyNumber = Math.floor(Math.random() * 6);
     var tabTotal = prompt('What is your total bill?');
-     alert('Your lucky number is ' + luckyNumber + ', your price before discount is ' + tabTotal + ', your total after your ' +
-         'lucky number draw is ' + calculateTotal(luckyNumber, tabTotal));
+    var discountPrice = calculateTotal(luckyNumber, tabTotal)
+     alert('Your lucky number is ' + luckyNumber + ', your price before discount is ' + tabTotal + ', your total after your lucky number draw is ' + discountPrice);
 
     /**
      * TODO:
@@ -183,18 +175,16 @@
      */
 
     //function  to check if the input is positive or negative
-    function positiveOrNegative(x) {
+    function positiveOrNegative(number) {
         if(num >= 0) {
             alert('your number is positive');
         } else if(num < 0) {
             alert('your number is negative');
-        } else {
-            return;
         }
     }
 
     // function to add 100 to the inputted number
-    function plusOneHundred(x) {
+    function plusOneHundred(number) {
         alert('your number is ' + numPlusOneHundred + " when added with 100");
     }
 
@@ -205,14 +195,14 @@
        var numPlusOneHundred = newNum + 100;
        if(isNaN(newNum)) {
            alert('That isn\'t a number');
-       } else if(num % 2 === 0) {
+       } else if(newNum % 2 === 0) {
            alert('your number is even');
            plusOneHundred(numPlusOneHundred);
-           positiveOrNegative(num);
+           positiveOrNegative(newNum);
        } else {
            alert('your number is odd');
            plusOneHundred(numPlusOneHundred);
-           positiveOrNegative(num);
+           positiveOrNegative(newNum);
        }
     } else {
         alert('please return to enter a number');
