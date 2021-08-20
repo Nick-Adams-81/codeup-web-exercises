@@ -56,7 +56,6 @@
     console.log(pies);
 
     // split function
-
     var names = 'Bob Sally Mary';
     console.log(names);
     var namesArr = names.split(' ');
@@ -64,7 +63,31 @@
 
     // join function
     var nameString = namesArr.join(', ');
-    console.log(nameString)
+    console.log(nameString);
+
+    var bondsArray = ['Connery', 'Lazenby', 'Moore', 'Dalton', 'Brosnan', 'Craig'];
+    // join function by hand
+    var output = '';
+    for(var i = 0; i < bondsArray.length; i++) {
+        output += bondsArray[i];
+        if(i !== bondsArray.length - 1) {
+            output += ', '
+        }
+    }
+
+    console.log(output);
+
+    var phoneNumbers = '555-555-5555\n555-123-4567\n555-987-6543';
+
+    var cleanPhoneNumbers = phoneNumbers.split('\n')
+    console.log(cleanPhoneNumbers);
+
+    cleanPhoneNumbers.forEach(function(phoneNumbers){
+        var cleanedNumber = phoneNumbers.split('-').join('');
+        console.log(cleanedNumber);
+    })
+
+
 
 
 })()
