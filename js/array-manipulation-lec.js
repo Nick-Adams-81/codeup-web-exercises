@@ -3,7 +3,7 @@
 (function() {
 
     // initializing an array
-    var pies = ['apple', 'cherry', 'key lime', 'banana', 'blueberry'];
+    var pies = ['apple', 'cherry', 'key lime', 'banana', 'blueberry', 'pistachio'];
     console.log(pies[1]);
 
 
@@ -33,14 +33,14 @@
     * */
 
     // initializing a new array for slice testings
-    var arr = [1, 3, 5, 7, 9, 11];
+    // var arr = [1, 3, 5, 7, 9, 11];
+    //
+    // var newArr = arr.slice(2, 4);
+    //
+    // console.log(newArr);
+    // console.log(arr);
 
-    var newArr = arr.slice(2, 4);
-
-    console.log(newArr);
-    console.log(arr);
-
-    // returning the last 3 elements in the pies array
+    // function returning the last 3 elements in the pies array
     function lastThreeBakedPies(arr) {
             return arr.slice(-3);
     }
@@ -48,11 +48,23 @@
     console.log('The last 3 baked pies are ' + lastThreeBakedPies(pies));
 
     // sort function
+    pies.sort();
+    console.log(pies);
 
-    pies.sort()
-    console.log(pies)
+    // reverse function
+    pies.reverse();
+    console.log(pies);
 
+    // split function
 
+    var names = 'Bob Sally Mary';
+    console.log(names);
+    var namesArr = names.split(' ');
+    console.log(namesArr);
+
+    // join function
+    var nameString = namesArr.join(', ');
+    console.log(nameString)
 
 
 })()
