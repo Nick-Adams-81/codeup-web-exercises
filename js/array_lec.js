@@ -36,23 +36,25 @@
 
 // declaring and initializing a large array
 
-// var students = [
-//     "Student 1",
-//     "Student 2",
-//     "Student 3",
-//     "Student 4",
-//     "Student 5",
-//     "Student 6",
-//     "Student 7",
-//     "Student 8"
-// ];
-
+var students = [
+    "Student 1",
+    "Student 2",
+    "Student 3",
+    "Student 4",
+    "Student 5",
+    "Student 6",
+    "Student 7",
+    "Student 8"
+];
+//
+// console.log(students[0]);
 
 // separate declaration and initialization
 
 // var pies = [];
 // pies[0] = "apple";
 // pies[1] = "cherry";
+
 
 // declaring and initializing a high index number
 // pies[10] = "huckleberry";
@@ -69,7 +71,7 @@
 
 // ============================= Accessing Array Elements
 
-// console.log(pies[100]);
+//console.log(pies[100]);
 // console.log(pies[3]);
 
 
@@ -98,7 +100,7 @@
 // backwards
 
 // for (var i = pies.length - 1; i >= 0; i -= 1) {
-//     console.log("I like " + pies[i]);
+//     console.log("I like " + pies[i] + ' pie')
 // }
 //
 // console.log(pies);
@@ -126,9 +128,9 @@
 
 
 // standard syntax
-// var pies = ["apple", "cherry", "key lime", "huckleberry"];
+var pies = ["apple", "cherry", "key lime", "huckleberry"];
 
-// defining all three parameters
+//defining all three parameters
 // pies.forEach(function(element, index, array){
 //
 //     console.log("Element " + element + " is at index " + index);
@@ -150,18 +152,21 @@
 
 // with only one parameter
 
-// pies.forEach(function(element){
-//     console.log("Element " + element);
-// });
-//
-//
-// console.log("----------------");
+pies.forEach(function(pie){
+    console.log("Element " + pie);
+});
 
 
-// callback function syntax
+console.log("----------------");
 
-// function logElements(element) {
-//     console.log("Element " + element);
-// }
-//
-// pies.forEach(logElements);
+
+//callback function syntax
+
+function logElements(element, index, array) {
+    console.log(element + ' is at index:' + index);
+    console.log(array[0]);
+}
+
+pies.forEach(logElements);
+students.forEach(logElements);
+
