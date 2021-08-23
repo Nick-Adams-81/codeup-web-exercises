@@ -47,7 +47,7 @@
     var myCar2 = new Object()
 
     console.log(myCar);
-    // console.log(myCar2);
+    console.log(myCar2);
 
 // That's great! But our car object doesn't have much going on, does it? There's no depth or meat to it - how can we fill our object in?
 
@@ -70,19 +70,20 @@
 //We can also set up our objects and properties/methods during object creation
 var otherCar = {
     make: 'Tesla',
-    model: 'Cybertrukk',
-    year: 2022
+    model: 'Cybertrukk'
 }
-    console.log(otherCar)
+    //console.log(otherCar)
 
 // TODO: Fill in your myCar object with properties of make, model, and year with the correct values. If you don't own a vehicle, fill in the details with your favorite vehicle.
 
 //For me? I'm missing the year for myCar so. .
 myCar.Make = 'Tesla';
 myCar.Model = 'Model 3';
-myCar.Year = 2019
+myCar.Year = 2019;
 // console.log(myCar);
-
+myCar2.Make = 'Tesla';
+myCar2.Model = 'Cybertrukk';
+myCar2.Year = 2022;
 //Now I have a completed example of the myCar object - the model and make were added above in prior examples
 
     /*
@@ -93,17 +94,22 @@ myCar.Year = 2019
 
 //With our myCar objects set up, let's start utilizing them and diving into them!
 //We can use dot notation or array notation in similar ways to start accessing these properties
-
 //Let's share some information about our cars :)
-
+ //alert('Hey everyone, I own a ' + myCar['Make'] + ' ' + myCar.Model);
 
 //We can tap into our prior understanding of assigning variables thus far and assign a property to a variable:
+var myCarYear = myCar.Year;
 
+ //alert('My cars year is ' + myCarYear);
 //What if we wanted to create a more complicated piece of data? Perhaps a list of our cars FEATURES?
 
-
+    myCar.Feature = ['AC', 'Leather', 'Power windows'];
+    console.log(myCar);
+    console.log(myCar.Feature);
 //Now we could do something like this. . a list of those features in the console
-
+for(var i = 0; i < myCar.Feature.length; i++) {
+    console.log(myCar.Feature[i]);
+}
 // TODO: Add an array of features that your vehicle has!
 
 //I already added an array of features above in the lecture, so I'm good to go.
