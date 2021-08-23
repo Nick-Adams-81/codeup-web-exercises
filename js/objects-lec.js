@@ -78,7 +78,9 @@ var otherCar = {
 // TODO: Fill in your myCar object with properties of make, model, and year with the correct values. If you don't own a vehicle, fill in the details with your favorite vehicle.
 
 //For me? I'm missing the year for myCar so. .
-
+myCar.Make = 'Tesla';
+myCar.Model = 'Model 3';
+myCar.Year = 2019
 // console.log(myCar);
 
 //Now I have a completed example of the myCar object - the model and make were added above in prior examples
