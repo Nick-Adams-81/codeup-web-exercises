@@ -34,30 +34,20 @@
     */
 
 // We can call the 'constructor' for an object and use it to create our objects:
-var myObject1 = new Object();
-console.log(myObject1);
+// var myObject1 = new Object();
+// console.log(myObject1);
 
 //More often, we'll use this object literal notation structure as shown above and below:
-var myObject2 = {};
-console.log(myObject2);
+// var myObject2 = {};
+// console.log(myObject2);
 
 //* TODO: Create a new Object and call it 'myCar' using either way to do so shown above (object instance or object literal)
 
-    var myCar = {
-        make: 'Tesla',
-        model: ' Model 3',
-        color: 'Black',
-        hasAutoPilot: true
-    }
-    var myCar2 = new Object({
-        make: 'Tesla',
-        model: 'Cybertrukk',
-        color: 'Black',
-        hasAutoPilot: true
-    })
+    var myCar = {}
+    var myCar2 = new Object()
 
     console.log(myCar);
-    console.log(myCar2);
+    // console.log(myCar2);
 
 // That's great! But our car object doesn't have much going on, does it? There's no depth or meat to it - how can we fill our object in?
 
@@ -72,13 +62,18 @@ console.log(myObject2);
 //Let's take myCar. . and actually line out what my car is.
 
 // We can use dot notation to do so:
-
+    //myCar.Make = 'Tesla';
 // Or array notation:
-
+    //myCar['Model'] = 'Model 3';
 
 //In general, dot notation is preferred of the two notations
 //We can also set up our objects and properties/methods during object creation
-
+var otherCar = {
+    make: 'Tesla',
+    model: 'Cybertrukk',
+    year: 2022
+}
+    console.log(otherCar)
 
 // TODO: Fill in your myCar object with properties of make, model, and year with the correct values. If you don't own a vehicle, fill in the details with your favorite vehicle.
 
