@@ -8,21 +8,22 @@
 
 //Let's set up an object and .log it to see what we're looking at:
 
-    var myCounty = {
-        name: "Bexar",
-        countySeat: "San Antonio",
-        currentPop: 2003554
-    }
-
-// console.log(myCounty);
-
-    var myDog = {
-        name: "Fenix",
-        age: 11,
-        breed: "Pembroke Welsh Corgi"
-    }
-
-// console.log(myDog);myDog
+ //    var myCounty = {
+ //        name: "Bexar",
+ //        countySeat: "San Antonio",
+ //        currentPop: 2003554
+ //    }
+ //
+ // console.log(myCounty);
+ //
+ //    var myDog = {
+ //        name: "Styx",
+ //        age: 8,
+ //        breed: "Pit Bull Terrier",
+ //        color: 'Brown and White'
+ //    }
+ //
+ // console.log(myDog);
 
 //.log-ing the above gets us the object 'printed' or 'viewed' in the console where we can click into the object to see its shape [properties]
 
@@ -33,10 +34,12 @@
     */
 
 // We can call the 'constructor' for an object and use it to create our objects:
-
+var myObject1 = new Object();
+console.log(myObject1);
 
 //More often, we'll use this object literal notation structure as shown above and below:
-
+var myObject2 = {};
+console.log(myObject2);
 
 //* TODO: Create a new Object and call it 'myCar' using either way to do so shown above (object instance or object literal)
 
