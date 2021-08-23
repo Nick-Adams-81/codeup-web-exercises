@@ -110,21 +110,35 @@ var myCarYear = myCar.Year;
 //     console.log(myCar.Feature[i]);
 // }
 // TODO: Add an array of features that your vehicle has!
-myCar.Features = ['AC', 'Leather', 'Power seats', 'Auto pilot', 'Back up camera', 'Regenerative braking']
+myCar.Features = ['AC', 'Leather', 'Power seats', 'Auto pilot', 'Back up camera', 'Regenerative braking'];
 //I already added an array of features above in the lecture, so I'm good to go.
-console.log(myCar)
+console.log(myCar);
 //What about who owns our car? That could be an object itself if we think it through - the owner has a firstName and a lastName at the very least, right?
 //Let's try nesting this object inside of our car object we've been building out
 
 // TODO: Nest a 'carOwner' object of your own into this growing myCar object and console.log the results!
-myCar.carOwner = {
+var carOwner = {
     firstName: 'Nick',
     lastName: 'Adams',
-    DOB: '11/23/1981'
+    DOB: '11/23/1981',
+    Address: '123 first ave',
+    City: 'Dallas',
+    State: 'Texas',
+    ZipCode: 12345,
+    phoneNumber: 5555555555,
+    emailAddress: 'test@test.com'
 }
+
+myCar.owner = carOwner;
+myCar2.owner = carOwner;
 //An object can also contain within itself a method (function). We can set it up similarly to our properties, but with a value that is the function expression
+// property: function() { . . . } //NOTE: no function name
 
-
+var turnCarOn = function() {
+    alert('Your ' + this.Make + ' is charged');
+}
+myCar.turnOn = turnCarOn;
+console.log(myCar.turnOn());
     /*
     * * * * * * * * * * * * * * * * * * * * * * * * * *
     *                 Arrays of Objects               *
@@ -132,10 +146,31 @@ myCar.carOwner = {
     */
 
 //Let's tie some things together: Let's make a garage with another car!
+// var garage = [myCar, myCar2];
+// console.log(garage);
+// //Now: loop through an ARRAY of OBJECTS, accessing our turnOn function for our vehicles
+// //Also note: we used the keyword *this* on the other vehicle's turnOn function, so this will be a good experiment to see the results
+// garage.forEach(function(car) {
+//     car.turnOn;
+// })
 
-//Now: loop through an ARRAY of OBJECTS, accessing our turnOn function for our vehicles
-//Also note: we used the keyword *this* on the other vehicle's turnOn function, so this will be a good experiment to see the results
 
 
 //One final TODO: A bigger task - set up your own garage and add at least another vehicle into it. Log your garage array to verify it contains the cars you want - once your garage has the right cars, write a loop to access some properties or a method from them!
+var myCar3 = {}
+
+myCar3.Make = 'Ford';
+myCar3.Model = 'Mustang';
+myCar3.Year = 2017;
+myCar3.owner = carOwner;
+
+var myGarage = [myCar, myCar2, myCar3];
+console.log(myGarage);
+myGarage.forEach(function(car) {
+    console.log('Your ' + car.Make + ' ' + car.Model + ' is model year ' + car.Year + '.');
+    console.log('owners first name is: ' + car.owner.firstName + ', last name is: ' + car.owner.lastName)
+
+
+})
+
 
