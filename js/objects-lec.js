@@ -1,6 +1,5 @@
 'use strict';
 
-(function() {
     //What's going on with these objects?
 //Well: an OBJECT is a grouping of data + functionality
 //Our data. . we call properties [in a 'key:value' pair]
@@ -103,22 +102,26 @@ var myCarYear = myCar.Year;
  //alert('My cars year is ' + myCarYear);
 //What if we wanted to create a more complicated piece of data? Perhaps a list of our cars FEATURES?
 
-    myCar.Feature = ['AC', 'Leather', 'Power windows'];
-    console.log(myCar);
-    console.log(myCar.Feature);
-//Now we could do something like this. . a list of those features in the console
-for(var i = 0; i < myCar.Feature.length; i++) {
-    console.log(myCar.Feature[i]);
-}
+    //myCar.Feature = ['AC', 'Leather', 'Power windows'];
+//     console.log(myCar);
+//     console.log(myCar.Feature);
+// //Now we could do something like this. . a list of those features in the console
+// for(var i = 0; i < myCar.Feature.length; i++) {
+//     console.log(myCar.Feature[i]);
+// }
 // TODO: Add an array of features that your vehicle has!
-
+myCar.Features = ['AC', 'Leather', 'Power seats', 'Auto pilot', 'Back up camera', 'Regenerative braking']
 //I already added an array of features above in the lecture, so I'm good to go.
-
+console.log(myCar)
 //What about who owns our car? That could be an object itself if we think it through - the owner has a firstName and a lastName at the very least, right?
 //Let's try nesting this object inside of our car object we've been building out
 
 // TODO: Nest a 'carOwner' object of your own into this growing myCar object and console.log the results!
-
+myCar.carOwner = {
+    firstName: 'Nick',
+    lastName: 'Adams',
+    DOB: '11/23/1981'
+}
 //An object can also contain within itself a method (function). We can set it up similarly to our properties, but with a value that is the function expression
 
 
@@ -136,4 +139,3 @@ for(var i = 0; i < myCar.Feature.length; i++) {
 
 //One final TODO: A bigger task - set up your own garage and add at least another vehicle into it. Log your garage array to verify it contains the cars you want - once your garage has the right cars, write a loop to access some properties or a method from them!
 
-})();
