@@ -25,18 +25,28 @@
      */
     planetsString = planetsArray.join(' <br> ');
     console.log(planetsString);
+
+
     var newPlanets = 'Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune';
     var newPlanetsArray = newPlanets.split(',');
     console.log(newPlanetsArray);
+
+    var planetsWithTags = '<ul> <li>' + newPlanetsArray.join('</li> <li>') + '</li> </ul>'
+    console.log(planetsWithTags);
+
+
+
+
+
  
-    var ulTag = document.createElement('div');
-    var liTag = document.createElement('ul');
-    var node = document.createTextNode(newPlanets);
-    var newChild = ulTag.appendChild(liTag);
-    var secondChild = newChild.appendChild(node);
-
-
-    console.log(liTag);
+    // var ulTag = document.createElement('div');
+    // var liTag = document.createElement('ul');
+    // var node = document.createTextNode(newPlanets);
+    // var newChild = ulTag.appendChild(liTag);
+    // var secondChild = newChild.appendChild(node);
+    //
+    //
+    // console.log(liTag);
 
 
 })();
