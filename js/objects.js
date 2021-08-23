@@ -70,6 +70,48 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
+    var book1 = {
+        title: 'The trials of JS',
+        author: {
+            firstName: 'Nick',
+            lastName: 'Adams'
+        }
+    }
+
+    var book2 = {
+        title: 'Fun with objects!!!',
+        author: {
+            firstName: 'John',
+            lastName: 'Doe'
+        }
+    }
+
+    var book3 = {
+        title: 'Black hole of programming',
+        author: {
+            firstName: 'Jane',
+            lastName: 'Doe'
+        }
+    }
+
+    var book4 = {
+        title: 'Some book some guy wrote',
+        author: {
+            firstName: 'Nicholas',
+            lastName: 'Pappas'
+        }
+    }
+
+    var book5 = {
+        title: 'Having fun with JS yet???',
+        author: {
+            firstName: 'Anonymous',
+            lastName: 'Person'
+        }
+    }
+
+
+    var books = [book1, book2, book3, book4, book5];
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -95,6 +137,12 @@
      *      ...
      */
 
+    for(var i = 0; i < books.length; i++) {
+        console.log('Book # ' + i);
+        console.log('Title: ' + books[i].title)
+        console.log('Author: ' + books[i].author.firstName + ' ' + books[i].author.lastName)
+    }
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -105,5 +153,6 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
 
 })();
