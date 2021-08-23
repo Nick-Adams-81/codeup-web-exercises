@@ -20,11 +20,22 @@
         }
 
         // loop that adds a symbol based on what iteration you are in.
+        // complicated version
 
         for(var i = 1; i < 10; i++) {
-            console.log(i.toString().repeat(i));
+            var output = "";
 
+            for(var h = 0; h < i; h++) {
+                output += i;
+            }
+            console.log(output);
         }
+
+        // simpler version
+        // for(var i = 1; i < 10; i++) {
+        //     console.log(i.toString().repeat(i));
+        //
+        // }
 
         //for loop that counts down from 100 and skips every 5 numbers
         for(let i = 100; i > 0; i--) {
