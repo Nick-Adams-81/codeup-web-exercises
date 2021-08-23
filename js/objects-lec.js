@@ -43,6 +43,15 @@ console.log(myObject2);
 
 //* TODO: Create a new Object and call it 'myCar' using either way to do so shown above (object instance or object literal)
 
+    var myCar = {
+        make: 'Tesla',
+        model: ' Model 3',
+        color: 'Black',
+        hasAutoPilot: true
+    }
+
+    console.log(myCar)
+
 // That's great! But our car object doesn't have much going on, does it? There's no depth or meat to it - how can we fill our object in?
 
     /*
