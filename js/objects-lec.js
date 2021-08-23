@@ -49,8 +49,15 @@ console.log(myObject2);
         color: 'Black',
         hasAutoPilot: true
     }
+    var myCar2 = new Object({
+        make: 'Tesla',
+        model: 'Cybertrukk',
+        color: 'Black',
+        hasAutoPilot: true
+    })
 
-    console.log(myCar)
+    console.log(myCar);
+    console.log(myCar2);
 
 // That's great! But our car object doesn't have much going on, does it? There's no depth or meat to it - how can we fill our object in?
 
