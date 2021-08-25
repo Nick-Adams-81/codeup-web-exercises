@@ -21,3 +21,8 @@ console.log(Math.random());
 var max = 10;
 var min = 2;
 console.log(Math.floor(Math.random() * (max - min + min) + min));
+
+//Math.round function rounds the decimal to nearest value
+console.log(Math.round(4.5));
+
+
