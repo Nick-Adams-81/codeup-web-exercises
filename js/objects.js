@@ -43,19 +43,19 @@
      * and console.log the relevant messages for each person
      */
 
-    var shoppers = [
-        {name: 'Cameron', amount: 180},
-        {name: 'Ryan', amount: 250},
-        {name: 'George', amount: 320}
-    ];
-    shoppers.forEach(function(shopper) {
-        if(shopper.amount > 200) {
-            var discount = shopper.amount - shopper.amount * .12;
-            console.log(shopper.name + ', your pre discount price is ' + shopper.amount  + ', your discount price is ' + discount);
-        } else {
-            console.log(shopper.name + ', your price is ' + shopper.amount + ', spend more to get the discount.')
-        }
-    })
+    // var shoppers = [
+    //     {name: 'Cameron', amount: 180},
+    //     {name: 'Ryan', amount: 250},
+    //     {name: 'George', amount: 320}
+    // ];
+    // shoppers.forEach(function(shopper) {
+    //     if(shopper.amount > 200) {
+    //         var discount = shopper.amount - shopper.amount * .12;
+    //         console.log(shopper.name + ', your pre discount price is ' + shopper.amount  + ', your discount price is ' + discount);
+    //     } else {
+    //         console.log(shopper.name + ', your price is ' + shopper.amount + ', spend more to get the discount.')
+    //     }
+    // })
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -135,10 +135,10 @@
      *      ---
      *      ...
      */
-    books.forEach(function(book, index,) {
+
+    books.forEach(function(book, index) {
         console.log('Book # ' + index);
-        console.log('Title: ' + book.title);
-        console.log('Author: ' + book.author.firstName + ' ' + book.author.lastName);
+        showBookInfo(book);
     });
 
 
@@ -169,16 +169,18 @@
        createBook('Pizza is good', 'Nik', 'Adams');
        createBook('I love movies', 'some', 'dude');
        createBook('some book', 'someone', 'random');
-       console.log(books);
+       //console.log(books);
 
 
 
-    var bookInfo = function() {
-        console.log(this.title);
-        console.log(this.author);
+
+    function showBookInfo(book) {
+        console.log(book.title);
+        console.log(book.author.firstName, book.author.lastName);
+
     }
-    book1.showBookInfo = bookInfo;
-    console.log(book1.showBookInfo());
+
+    //showBookInfo(book2);
 
 
 
