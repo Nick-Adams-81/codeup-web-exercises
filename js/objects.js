@@ -1,4 +1,4 @@
-(function() {
+
     "use strict";
     /**
      * TODO:
@@ -25,7 +25,7 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
      var sayHello = function() {
-         return 'Hello ' + this.firstName + ' ' + this.lastName
+         return 'Hello from ' + this.firstName + ' ' + this.lastName
     }
     person.hello = sayHello;
     console.log(person.hello());
@@ -48,12 +48,12 @@
         {name: 'Ryan', amount: 250},
         {name: 'George', amount: 320}
     ];
-    shoppers.forEach(function(shopper, index, array) {
+    shoppers.forEach(function(shopper) {
         if(shopper.amount > 200) {
             var discount = shopper.amount - shopper.amount * .12;
             console.log(shopper.name + ', your pre discount price is ' + shopper.amount  + ', your discount price is ' + discount);
         } else {
-            console.log(shopper.name + ', your price is ' + shopper.amount + '.')
+            console.log(shopper.name + ', your price is ' + shopper.amount + ', spend more to get the discount.')
         }
     })
 
@@ -164,5 +164,11 @@
            })
     }
 
-    console.log(createBook('cold storage', 'Nick', 'Adams'));
-})();
+       var newBook = createBook('Pizza is good', 'Nik', 'Adams');
+       console.log(newBook);
+       books.unshift(newBook);
+       console.log(books);
+
+
+
+
