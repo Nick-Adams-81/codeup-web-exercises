@@ -29,4 +29,6 @@ console.log(Math.round(4.5));
 
 console.log(Math.floor(4.9));
 
+// Math.ceil rounds a number up
+console.log(Math.ceil(4.2));
 

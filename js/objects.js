@@ -175,12 +175,11 @@
 
 
     function showBookInfo(book) {
-        console.log(book.title);
-        console.log(book.author.firstName, book.author.lastName);
-
+        console.log('Title: ' + book.title);
+        console.log('Author: ' + book.author.firstName, book.author.lastName);
     }
 
-    //showBookInfo(book2);
+
 
 
 
