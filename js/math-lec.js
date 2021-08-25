@@ -25,4 +25,6 @@ console.log(Math.floor(Math.random() * (max - min + min) + min));
 //Math.round function rounds the decimal to nearest value
 console.log(Math.round(4.5));
 
+// Math.floor rounds a number down
 
+console.log(Math.floor(4.9));
