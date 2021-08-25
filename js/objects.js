@@ -138,8 +138,8 @@
     books.forEach(function(book, index,) {
         console.log('Book # ' + index);
         console.log('Title: ' + book.title);
-        console.log('Author: ' + book.author.firstName + ' ' + book.author.lastName)
-    })
+        console.log('Author: ' + book.author.firstName + ' ' + book.author.lastName);
+    });
 
 
 
@@ -155,20 +155,30 @@
      *   `showBookInfo` function.
      */
        function createBook(title, firstName, lastName) {
-           return new Object({
+           var newBook = {
                title: title,
                author: {
                    firstName: firstName,
                    lastName: lastName
                }
-           })
+           }
+        books.unshift(newBook);
     }
 
-       var newBook = createBook('Pizza is good', 'Nik', 'Adams');
-       console.log(newBook);
-       books.unshift(newBook);
+
+       createBook('Pizza is good', 'Nik', 'Adams');
+       createBook('I love movies', 'some', 'dude');
+       createBook('some book', 'someone', 'random');
        console.log(books);
 
+
+
+    var bookInfo = function() {
+        console.log(this.title);
+        console.log(this.author);
+    }
+    book1.showBookInfo = bookInfo;
+    console.log(book1.showBookInfo());
 
 
 
