@@ -43,19 +43,19 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
-    // shoppers.forEach(function(shopper) {
-    //     if(shopper.amount > 200) {
-    //         var discount = shopper.amount - shopper.amount * .12;
-    //         console.log(shopper.name + ', your pre discount price is ' + shopper.amount  + ', your discount price is ' + discount);
-    //     } else {
-    //         console.log(shopper.name + ', your price is ' + shopper.amount + ', spend more to get the discount.')
-    //     }
-    // })
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+    shoppers.forEach(function(shopper) {
+        if(shopper.amount > 200) {
+            var discount = shopper.amount - shopper.amount * .12;
+            console.log(shopper.name + ', your pre discount price is ' + shopper.amount  + ', your discount price is ' + discount);
+        } else {
+            console.log(shopper.name + ', your price is ' + shopper.amount + ', spend more to get the discount.')
+        }
+    })
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -137,7 +137,7 @@
      */
 
     books.forEach(function(book, index) {
-        console.log('Book # ' + index);
+        console.log('Book # ' + (index + 1));
         showBookInfo(book);
     });
 

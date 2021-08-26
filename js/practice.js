@@ -77,11 +77,7 @@
 
     // is numeric
     function isNumeric(input) {
-        if(typeof input === 'number') {
-            return true;
-        } else {
-            return false;
-        }
+        return typeof input === 'number';
     }
 
     console.log(isNumeric(9));
@@ -89,7 +85,7 @@
     // count
     function count(input) {
         for(var i = 0; i < input.length; i++) {
-            return input.length;
+            console.log(input[i]) ;
         }
     }
 
