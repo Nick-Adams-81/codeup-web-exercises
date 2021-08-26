@@ -162,14 +162,14 @@
                    lastName: lastName
                }
            }
-        books.unshift(newBook);
+        books.push(newBook);
     }
 
 
        createBook('Pizza is good', 'Nik', 'Adams');
        createBook('I love movies', 'some', 'dude');
        createBook('some book', 'someone', 'random');
-       //console.log(books);
+       console.log(books);
 
 
 
