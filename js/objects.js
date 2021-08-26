@@ -177,6 +177,7 @@
     function showBookInfo(book) {
         console.log('Title: ' + book.title);
         console.log('Author: ' + book.author.firstName, book.author.lastName);
+        console.log('----')
     }
 
 
