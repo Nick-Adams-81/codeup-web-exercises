@@ -2,7 +2,13 @@
     float: left;
     margin: 15px;
 }
+
 #rick-and-morty-status {
+    float: left;
+    margin: 15px;
+}
+
+#rick-and-morty-species {
     float: left;
     margin: 15px;
 }

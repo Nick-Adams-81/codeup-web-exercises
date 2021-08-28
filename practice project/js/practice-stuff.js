@@ -1,19 +1,11 @@
 'use strict';
 
-// random event listener
- var btn = document.getElementById('btn');
- btn.addEventListener('click', function() {
-     alert('i got clicked')
- });
-
- // fetch api
-
+// fetch api
 fetch('https://rickandmortyapi.com/api/character/')
     .then(res => res.json())
-
+    //.then(data => console.log(data))
     .then(characters => showCharacters(characters.results))
     .catch(err => console.log(err))
-
 
 
 let showCharacters = characters => {
@@ -30,6 +22,14 @@ let showCharacters = characters => {
         const characterEl = document.createElement('p');
         characterEl.innerText = `Status: ${char.status}`
         characterDiv2.append(characterEl);
+    })
+
+    const speciesDiv = document.querySelector('#rick-and-morty-species')
+    characters.forEach(char => {
+        const charEl2 = document.createElement('p');
+        charEl2.innerText = `Species: ${char.species}`
+        speciesDiv.append(charEl2);
+
     })
 
 }
