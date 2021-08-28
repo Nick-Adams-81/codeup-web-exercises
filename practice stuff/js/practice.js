@@ -9,6 +9,8 @@
 
     }
 
+    me.isSingle = true;
+    me.myCar = 'Tesla Model 3'
     console.log(me);
 
 })()
