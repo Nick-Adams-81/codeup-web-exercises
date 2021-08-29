@@ -44,7 +44,11 @@
     personArr.push(me)
     personArr.unshift(myGirl)
     personArr.push(myParents)
-    console.log(personArr)
-    console.log(me);
+    // console.log(personArr)
+    //console.log(myParents.mother)
+
+    personArr.forEach(function(person) {
+        console.log(person)
+    })
 
 })()
