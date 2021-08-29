@@ -10,7 +10,12 @@
     }
 
     me.isSingle = true;
-    me.myCar = 'Tesla Model 3'
+    me.myCar = {
+        make: 'Tesla',
+        model: 3,
+        year: 2019
+    }
+
     console.log(me);
 
 })()
