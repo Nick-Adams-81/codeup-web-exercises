@@ -26,6 +26,7 @@
 
     myGirl.job = 'Waitress';
 
+
     var myParents = {
         mother: {
             name: 'Terry Lev',
@@ -38,6 +39,15 @@
             where: 'Sacramento, CA'
         }
     }
+
+    myParents.mother.isRetired = true;
+    myParents.mother.car = {
+        make: 'Buick',
+        model: 'LeSabre',
+        year: 2007
+    }
+
+    myParents.stepFather.isRetired = false;
 
     var personArr = [];
 
