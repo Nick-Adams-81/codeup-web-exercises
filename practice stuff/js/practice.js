@@ -53,12 +53,22 @@
 
     personArr.push(me)
     personArr.unshift(myGirl)
-    personArr.push(myParents)
-    // console.log(personArr)
+    //personArr.push(myParents)
+     console.log(personArr)
     //console.log(myParents.mother)
 
     personArr.forEach(function(person) {
-        console.log(person)
-    })
+        var main = document.querySelector('#main');
+        var second = document.querySelector('#second');
+        var text = document.createElement('h1');
+        var text2 = document.createElement('p');
+        text2.innerText = person.age;
+        text.innerText = person.name;
+        main.append(text);
+        second.append(text2)
+    });
+
+
+
 
 })()
