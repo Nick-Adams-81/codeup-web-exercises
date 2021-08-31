@@ -68,7 +68,17 @@
         second.append(text2)
     });
 
+    function add(a, b) {
+        if(isNaN(parseInt(a)) || isNaN(parseInt(b))) return false
+         else return a + b
 
+    }
+    function increment(input) {
+        if(isNaN(parseInt(input))) return false
+        else return ++input
+    }
+    console.log(add(1, 8));
+    console.log(increment('90'))
 
 
 })()
