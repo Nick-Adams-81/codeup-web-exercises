@@ -6,7 +6,6 @@
         name: 'Nick Adams',
         where: 'Dallas, TX',
         age: '39'
-
     }
 
     me.isSingle = false;
@@ -21,7 +20,6 @@
             name: 'Jenny Marin',
             where: 'Dallas, TX',
             age: '22'
-
         }
 
     myGirl.job = 'Waitress';
@@ -51,11 +49,11 @@
 
     var personArr = [];
 
-    personArr.push(me)
-    personArr.unshift(myGirl)
-    //personArr.push(myParents)
-     console.log(personArr)
-    //console.log(myParents.mother)
+    personArr.push(me);
+    personArr.unshift(myGirl);
+    //personArr.push(myParents);
+     //console.log(personArr);
+    //console.log(myParents.mother);
 
     personArr.forEach(function(person) {
         var main = document.querySelector('#main');
@@ -65,34 +63,33 @@
         text2.innerText = person.age;
         text.innerText = person.name;
         main.append(text);
-        second.append(text2)
+        second.append(text2);
     });
 
     function add(a, b) {
-        if(isNaN(parseInt(a)) || isNaN(parseInt(b))) return false
-         else return a + b
+        if(isNaN(parseInt(a)) || isNaN(parseInt(b))) return false;
+         else return a + b;
     }
 
     function increment(input) {
-        if(isNaN(parseInt(input))) return false
-        else return ++input
+        if(isNaN(parseInt(input))) return false;
+        else return ++input;
     }
 
     function decrement(input) {
         if(isNaN(parseFloat(input))) return false;
-        else return --input
+        else return --input;
     }
 
-    function isPalendrome(input) {
-        if(typeof input !== 'string') return false
-        var forward = input.toLowerCase()
-        var reverse = input.split('').reverse().join('').toLowerCase()
-        return forward === reverse
+    function isPalindrome(input) {
+        if(typeof input !== 'string') return false;
+        var forward = input.toLowerCase();
+        var reverse = input.split('').reverse().join('').toLowerCase();
+        return forward === reverse;
     }
     console.log(add(1, 8));
     console.log(increment('90'));
     console.log(decrement(1));
-    console.log(isPalendrome('abc'));
+    console.log(isPalindrome('BoBbOb'));
 
-
-})()
+})();

@@ -5,36 +5,44 @@
     <title>Register with us</title>
 </head>
 <body>
-<h3>Register with us!</h3>
+
+<h2>Register with us!</h2>
+
 <form method="POST" action="https://request-inspector.glitch.me/">
-    <label for="username">
-        Email <input type="text" name="email"  id="username" placeholder="email">
-    </label>
-    <label for="password">
-        Password <input type="text" name="password"  id="password" placeholder="password">
-    </label>
-    <br>
-    <label for="bio">
-        Bio <textarea id="bio" placeholder="Tell us about yourself!" name="bio"></textarea>
-    </label>
-    <br>
-    <h3>How did you hear about us?</h3>
-    <label>
-       Billboard <input type="radio" name="hear-about-us" value="Billboard">
-       Radio advertisement <input type="radio" name="hear-about-us" value="Radio Advertisement">
-       Other <input type="radio" name="hear-about-us" value="Other">
-    </label>
+    <label for="username">Email</label>
+    <div>
+        <input type="text" name="email" id="username" placeholder="email">
+    </div>
     <br>
 
-    <p>What browser are you using?</p>
-    <label>
-        <select name="browser">
+    <label for="password">Password</label>
+    <div>
+        <input type="text" name="password" id="password" placeholder="password">
+    </div>
+    <br>
+
+    <label for="bio">Bio</label>
+    <div>
+        <textarea id="bio" placeholder="Tell us about yourself!" name="bio"></textarea>
+    </div>
+    <br>
+
+    <label for="dropdown">How did you hear about us?</label>
+        <div id="dropdown">
+            Billboard <input type="radio" name="hear-about-us" value="Billboard">
+            Radio advertisement <input type="radio" name="hear-about-us" value="Radio Advertisement">
+            Other <input type="radio" name="hear-about-us" value="Other">
+        </div>
+    <br>
+
+    <label for="browser">What browser are you using?</label>
+        <select name="browser" id="browser">
             <option selected value="Google">Google Chrome</option>
             <option selected value="Firefox">Firefox</option>
             <option selected value="Safari">Safari</option>
         </select>
-    </label>
-    <input type="submit">
+
+    <button type="submit">Submit</button>
 </form>
 </body>
 </html>
