@@ -71,14 +71,28 @@
     function add(a, b) {
         if(isNaN(parseInt(a)) || isNaN(parseInt(b))) return false
          else return a + b
-
     }
+
     function increment(input) {
         if(isNaN(parseInt(input))) return false
         else return ++input
     }
+
+    function decrement(input) {
+        if(isNaN(parseFloat(input))) return false;
+        else return --input
+    }
+
+    function isPalendrome(input) {
+        if(typeof input !== 'string') return false
+        var forward = input.toLowerCase()
+        var reverse = input.split('').reverse().join('').toLowerCase()
+        return forward === reverse
+    }
     console.log(add(1, 8));
-    console.log(increment('90'))
+    console.log(increment('90'));
+    console.log(decrement(1));
+    console.log(isPalendrome('abc'));
 
 
 })()
