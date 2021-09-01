@@ -3,6 +3,12 @@
        line
        comment
        */
+body {
+    background-color: slategray;
+}
+table {
+    background-color: yellowgreen;
+}
 .fancy-header {
     color: purple; /* single line comment */
     text-decoration: underline;
