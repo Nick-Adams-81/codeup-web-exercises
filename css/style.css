@@ -8,8 +8,24 @@ body {
 }
 table {
     background-color: yellowgreen;
+    border-radius: 10px;
+
+}
+p {
+    font-family: "Al Nile";
+    font-size: large;
+}
+h2 {
+    color: darkred;
+}
+li {
+    font-family: cursive;
+    color: yellow;
 }
 .fancy-header {
     color: purple; /* single line comment */
     text-decoration: underline;
+}
+em {
+    color: cornsilk;
 }
