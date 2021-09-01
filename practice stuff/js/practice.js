@@ -87,9 +87,27 @@
         var reverse = input.split('').reverse().join('').toLowerCase();
         return forward === reverse;
     }
-    console.log(add(1, 8));
-    console.log(increment('90'));
-    console.log(decrement(1));
-    console.log(isPalindrome('BoBbOb'));
 
+    function revNumber(input) {
+       input = input + ''
+        return input.split('').reverse().join('')
+    }
+
+    function alphabetStr(input) {
+      return input.split('').sort().join('')
+    }
+
+    // console.log(alphabetStr('Hello cruel'));
+    // console.log(revNumber(12345));
+    // console.log(add(1, 8));
+    // console.log(increment('90'));
+    // console.log(decrement(1));
+    // console.log(isPalindrome('BoBbOb'));
+
+   function test(num, len) {
+        for(let i = 1; i <= len; i++) {
+            console.log(num * [i])
+        }
+   }
+    test(7, 5)
 })();
