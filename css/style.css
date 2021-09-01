@@ -34,3 +34,7 @@ strong {
     color: cornsilk;
 }
 
+em:hover {
+    color: green;
+}
+
