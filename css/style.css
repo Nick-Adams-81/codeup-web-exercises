@@ -11,32 +11,43 @@ body {
     background-size: auto;
     background-repeat: no-repeat;
     background-position: top;
-    font-family: cursive;
+    font-family: "georgia", sans-serif;
 }
 
 h2 {
-    font-family: "Arial Hebrew Scholar";
+    font-family: "courier-new", monospace;
     color: green;
     text-decoration: underline;
 }
+
 li {
     list-style: none;
-
 }
+
 li:before {
     content: "∞";
 }
 
-table, td, tr {
-    padding: 2px;
-    font-size: x-large;
+#table-header {
+    font-family: 'Arial', sans-serif;
 }
+
+table, td {
+    padding: 5px;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', serif;
+}
+
 a:visited {
     color: green;
 }
+
 a:hover {
     color: cornsilk;
 }
+
 a:link {
     color: blue;
 }
@@ -44,6 +55,47 @@ a:link {
 a:active {
     color: red;
 }
+
+/* ----- websafe fonts(per w3 schools)
+     ------- can adapt to any browser on any device -------
+Arial (sans-serif)
+Verdana (sans-serif)
+Helvetica (sans-serif)
+Tahoma (sans-serif)
+Trebuchet MS (sans-serif)
+Times New Roman (serif)
+Georgia (serif)
+Garamond (serif)
+Courier New (monospace)
+Brush Script MT (cursive)
+*/
+
+/* ----- difference in pixels, ems, and rems
+px is NOT scaleable
+em and rem are responsive interpreted into equivalent px unit by browser
+*/
+
+/* ----- controlling spacing betwwen letters in css
+some-el {
+    letter-spacing: 2px;
+   OR
+   letter-spacing: 1em -- element
+   OR
+   letter-spacing: 1rem -- root element
+}
+*/
+
+/* ----- changing the case of letters in css
+
+some-el {
+    text-transform: lowercase;  -- makes all of the letters in the selected element to lowercase
+    OR
+    text-transform: uppercase;  -- makes all of the letters in the selected element to uppercase
+    OR
+    text-transform: capitalize  -- capitalizes the first letter of each word in the selected element
+}
+*/
+
 
 
 
