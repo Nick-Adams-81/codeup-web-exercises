@@ -27,14 +27,15 @@ li {
 li:before {
     content: "∞";
 }
-
+/* web safe fonts example */
 #table-header {
     font-family: 'Arial', sans-serif;
 }
 
-table, td {
-    padding: 5px;
-    font-size: 1.5rem;
+table {
+    /* differences between px, em, & rem */
+    padding: .5rem;
+    font-size: 1.5em;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     font-family: 'Times New Roman', serif;
