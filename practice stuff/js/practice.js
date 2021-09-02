@@ -110,4 +110,14 @@
         }
    }
     test(7, 5)
+
+
+    // thursday warm up
+    function tellFortune(children, partner, location, job) {
+       return 'You have ' + children + ' kids, your partner\'s name is ' + partner + ', you live in ' + location + ' and your job is ' + job + '.'
+    }
+
+    console.log(tellFortune(3, 'jenny', 'dallas', 'programmer'));
+    console.log(tellFortune(5, 'carissa', 'sacramento', 'poker dealer'));
+    console.log(tellFortune(0, 'i\'m single', 'hawaii', 'freeloader'));
 })();
