@@ -97,12 +97,12 @@
       return input.split('').sort().join('')
     }
 
-    // console.log(alphabetStr('Hello cruel'));
-    // console.log(revNumber(12345));
-    // console.log(add(1, 8));
-    // console.log(increment('90'));
-    // console.log(decrement(1));
-    // console.log(isPalindrome('BoBbOb'));
+    console.log(alphabetStr('Hello cruel'));
+    console.log(revNumber(12345));
+    console.log(add(1, 8));
+    console.log(increment('90'));
+    console.log(decrement(1));
+    console.log(isPalindrome('BoBbOb'));
 
    function test(num, len) {
         for(let i = 1; i <= len; i++) {

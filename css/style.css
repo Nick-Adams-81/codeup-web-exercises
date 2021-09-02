@@ -35,6 +35,8 @@ strong {
 }
 
 em:hover {
-    color: green;
+    color: darkgreen;
 }
-
+ul {
+    margin-left: 0;
+}
