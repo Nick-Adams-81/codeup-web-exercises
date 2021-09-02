@@ -67,42 +67,30 @@
     });
 
     function add(a, b) {
-        if(isNaN(parseInt(a)) || isNaN(parseInt(b))) return false;
-         else return a + b;
+        if(isNaN(parseInt(a)) || isNaN(parseInt(b))) {
+            return false
+        } else {
+            return a + b;
+        }
     }
 
-    function increment(input) {
-        if(isNaN(parseInt(input))) return false;
-        else return ++input;
-    }
-
-    function decrement(input) {
-        if(isNaN(parseFloat(input))) return false;
-        else return --input;
+    function square(input) {
+        if(isNaN(parseInt(input))) {
+            return false
+        } else {
+            return input * input
+        }
     }
 
     function isPalindrome(input) {
-        if(typeof input !== 'string') return false;
-        var forward = input.toLowerCase();
-        var reverse = input.split('').reverse().join('').toLowerCase();
-        return forward === reverse;
+        var forward = input.toLowerCase()
+        var reverse = input.split('').reverse().join('').toLowerCase()
+        return forward === reverse
     }
+    console.log(square(5))
+    console.log(add(4, 6))
+    console.log(isPalindrome("boby"))
 
-    function revNumber(input) {
-       input = input + ''
-        return input.split('').reverse().join('')
-    }
-
-    function alphabetStr(input) {
-      return input.split('').sort().join('')
-    }
-
-    console.log(alphabetStr('hello people'));
-    console.log(revNumber(12345));
-    console.log(add(1, 8));
-    console.log(increment('90'));
-    console.log(decrement(1));
-    console.log(isPalindrome('BoBbOb'));
 
    function test(num, len) {
         for(let i = 1; i <= len; i++) {
