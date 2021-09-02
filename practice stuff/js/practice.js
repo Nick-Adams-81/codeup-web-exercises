@@ -97,7 +97,7 @@
       return input.split('').sort().join('')
     }
 
-    console.log(alphabetStr('Hello cruel'));
+    console.log(alphabetStr('hello people'));
     console.log(revNumber(12345));
     console.log(add(1, 8));
     console.log(increment('90'));
@@ -117,8 +117,8 @@
        // var children = prompt('How Many kids do you want?');
        // var partner = prompt('what\'s your spouses name?');
        // var location = prompt('Where do you live?');
-       // var job = prompt('What do you do for work?')
-       return 'You will have ' + children + ' kids, your partner\'s name will be ' + partner + ', you will live in ' + location + ' and your job will be ' + job + '.'
+       // var job = prompt('What do you do for work?');
+       return 'You will have ' + children + ' kids, your partner\'s name will be ' + partner + ', you will live in ' + location + ' and your job will be ' + job + '.';
     }
 
     console.log(tellFortune(3, 'jenny', 'dallas', 'programmer'));
@@ -126,4 +126,5 @@
     console.log(tellFortune(5, 'carissa', 'sacramento', 'poker dealer'));
     console.log('--------------------------------------------------');
     console.log(tellFortune(0, 'i\'m single', 'hawaii', 'freeloader'));
+
 })();
