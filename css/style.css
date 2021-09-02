@@ -24,14 +24,16 @@ li {
 
 }
 li:before {
-    content: "?";
+    content: "∞";
 }
 
 table, td, tr {
     padding: 2px;
     font-size: x-large;
 }
-
+a:visited {
+    color: green;
+}
 a:hover {
     color: cornsilk;
 }
@@ -40,7 +42,7 @@ a:link {
 }
 
 a:active {
-    color: blue;
+    color: red;
 }
 
 
