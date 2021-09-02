@@ -32,6 +32,16 @@ table, td, tr {
     font-size: x-large;
 }
 
+a:hover {
+    color: cornsilk;
+}
+a:link {
+    color: blue;
+}
+
+a:active {
+    color: blue;
+}
 
 
 
