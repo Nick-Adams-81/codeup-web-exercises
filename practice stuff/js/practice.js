@@ -117,11 +117,11 @@
         if (isNaN(parseInt(dogAge)) || isNaN(parseInt(humanAge))) return false;
         var newDogAge = dogAge * 7;
         var humanAgeInDogYears = humanAge * 7;
-        console.log('Your doggie is ' + newDogAge + ' and you are ' + humanAgeInDogYears + ' in doggie years!');
+        return 'Your doggie is ' + newDogAge + ' in human years and you are ' + humanAgeInDogYears + ' in doggie years!';
 
     }
 
-    dogYears(8, 39);
+    console.log(dogYears('8', 39));
     console.log(tellFortune(3, 'jenny', 'dallas', 'programmer'));
     console.log('--------------------------------------------------');
     console.log(tellFortune(5, 'carissa', 'sacramento', 'poker dealer'));
