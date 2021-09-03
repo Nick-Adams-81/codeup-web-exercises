@@ -1,6 +1,6 @@
 'use strict';
 
-(function() {
+(function () {
 
     var me = {
         name: 'Nick Adams',
@@ -17,10 +17,10 @@
 
 
     var myGirl = {
-            name: 'Jenny Marin',
-            where: 'Dallas, TX',
-            age: '22'
-        }
+        name: 'Jenny Marin',
+        where: 'Dallas, TX',
+        age: '22'
+    }
 
     myGirl.job = 'Waitress';
 
@@ -52,10 +52,10 @@
     personArr.push(me);
     personArr.unshift(myGirl);
     //personArr.push(myParents);
-     //console.log(personArr);
+    //console.log(personArr);
     //console.log(myParents.mother);
 
-    personArr.forEach(function(person) {
+    personArr.forEach(function (person) {
         var main = document.querySelector('#main');
         var second = document.querySelector('#second');
         var text = document.createElement('h1');
@@ -67,7 +67,7 @@
     });
 
     function add(a, b) {
-        if(isNaN(parseInt(a)) || isNaN(parseInt(b))) {
+        if (isNaN(parseInt(a)) || isNaN(parseInt(b))) {
             return false
         } else {
             return a + b;
@@ -75,7 +75,7 @@
     }
 
     function square(input) {
-        if(isNaN(parseInt(input))) {
+        if (isNaN(parseInt(input))) {
             return false
         } else {
             return input * input
@@ -87,40 +87,45 @@
         var reverse = input.split('').reverse().join('').toLowerCase()
         return forward === reverse
     }
+
     console.log(square(5))
     console.log(add(4, 6))
     console.log(isPalindrome("BoBBob"))
 
 
-   function test(num, len) {
-        for(let i = 1; i <= len; i++) {
+    function test(num, len) {
+        for (let i = 1; i <= len; i++) {
             console.log(num * [i])
         }
-   }
+    }
+
     test(7, 5)
 
 
     // thursday warm up
     function tellFortune(children, partner, location, job) {
-       // var children = prompt('How Many kids do you want?');
-       // var partner = prompt('what\'s your spouses name?');
-       // var location = prompt('Where do you live?');
-       // var job = prompt('What do you do for work?');
-       return 'You will have ' + children + ' kids, your partner\'s name will be ' + partner + ', you will live in ' + location + ' and your job will be ' + job + '.';
+        // var children = prompt('How Many kids do you want?');
+        // var partner = prompt('what\'s your spouses name?');
+        // var location = prompt('Where do you live?');
+        // var job = prompt('What do you do for work?');
+        return 'You will have ' + children + ' kids, your partner\'s name will be ' + partner + ', you will live in ' + location + ' and your job will be ' + job + '.';
     }
 
     // friday warmup
 
     function dogYears(dogAge, humanAge) {
-        if(isNaN(parseInt(dogAge)) || isNaN(parseInt(humanAge))) return false
-       else return [dogAge * 7, humanAge * 7];
+        if (isNaN(parseInt(dogAge)) || isNaN(parseInt(humanAge))) return false;
+        var newDogAge = dogAge * 7;
+        var humanAgeInDogYears = humanAge * 7;
+        console.log('Your doggie is ' + newDogAge + ' and you are ' + humanAgeInDogYears + ' in doggie years!');
+
     }
 
-    console.log(dogYears(1, '15'));
-    // console.log(tellFortune(3, 'jenny', 'dallas', 'programmer'));
-    // console.log('--------------------------------------------------');
-    // console.log(tellFortune(5, 'carissa', 'sacramento', 'poker dealer'));
-    // console.log('--------------------------------------------------');
-    // console.log(tellFortune(0, 'i\'m single', 'hawaii', 'freeloader'));
+    dogYears(8, 39);
+    console.log(tellFortune(3, 'jenny', 'dallas', 'programmer'));
+    console.log('--------------------------------------------------');
+    console.log(tellFortune(5, 'carissa', 'sacramento', 'poker dealer'));
+    console.log('--------------------------------------------------');
+    console.log(tellFortune(0, 'i\'m single', 'hawaii', 'freeloader'));
 
 })();
