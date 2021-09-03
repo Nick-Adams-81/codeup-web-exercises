@@ -89,7 +89,7 @@
     }
     console.log(square(5))
     console.log(add(4, 6))
-    console.log(isPalindrome("boby"))
+    console.log(isPalindrome("BoBBob"))
 
 
    function test(num, len) {
@@ -109,10 +109,18 @@
        return 'You will have ' + children + ' kids, your partner\'s name will be ' + partner + ', you will live in ' + location + ' and your job will be ' + job + '.';
     }
 
-    console.log(tellFortune(3, 'jenny', 'dallas', 'programmer'));
-    console.log('--------------------------------------------------');
-    console.log(tellFortune(5, 'carissa', 'sacramento', 'poker dealer'));
-    console.log('--------------------------------------------------');
-    console.log(tellFortune(0, 'i\'m single', 'hawaii', 'freeloader'));
+    // friday warmup
+
+    function dogYears(dogAge, humanAge) {
+        if(isNaN(parseInt(dogAge)) || isNaN(parseInt(humanAge))) return false
+       else return [dogAge * 7, humanAge * 7];
+    }
+
+    console.log(dogYears(1, '15'));
+    // console.log(tellFortune(3, 'jenny', 'dallas', 'programmer'));
+    // console.log('--------------------------------------------------');
+    // console.log(tellFortune(5, 'carissa', 'sacramento', 'poker dealer'));
+    // console.log('--------------------------------------------------');
+    // console.log(tellFortune(0, 'i\'m single', 'hawaii', 'freeloader'));
 
 })();
