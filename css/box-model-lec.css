@@ -2,10 +2,7 @@
 body {
     background-color: darkslateblue;
 }
-#container {
-    display: flex;
-    width: 100%;
-}
+
 #box {
     background-color: darkred;
     width: 100px;
@@ -16,6 +13,7 @@ body {
 }
 
 #box2 {
+    box-sizing: border-box;
     background-color: darkgreen;
     width: 100px;
     height: 100px;
@@ -26,6 +24,7 @@ body {
 }
 
 #box3 {
+    box-sizing: border-box;
     background-color: orange;
     width: 100px;
     height: 100px;
