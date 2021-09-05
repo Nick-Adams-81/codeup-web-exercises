@@ -71,14 +71,17 @@ a {
 .profile-details {
     margin: .5em 0 .5em 0;
     width: 25%;
+    float: left;
 
 }
 
 .timeline {
     width: 50%;
+    float: left;
 }
 .who-to-follow {
     width: 25%;
+    float: left;
 }
 
 .btn {
