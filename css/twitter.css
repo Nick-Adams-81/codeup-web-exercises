@@ -5,9 +5,11 @@
     --light-bg: #FFF;
     --separator-color: #DDD;
 }
+
 * {
     box-sizing: border-box;
 }
+
 body, html {
     background-color: var(--main-bg);
     height: 100%;
@@ -16,25 +18,30 @@ body, html {
     padding: 0;
     font-family: Arial, Ubuntu, sans-serif;
 }
+
 header {
     background-image: url("https://picsum.photos/1200/300");
     background-size: cover;
     min-height: 300px;
     padding-top: 275px;
 }
+
 a {
     color: var(--link-color);
 }
+
 .top-nav {
     background: var(--light-bg);
+    z-index: 100;
 }
+
 .nav {
     list-style-type: none;
     padding: 0;
     margin: 0;
     background-color: #0fb784;
-
 }
+
 .nav-item {
     display: inline-block;
     height: 3em;
@@ -46,20 +53,34 @@ a {
     font-weight: bold;
     text-decoration: none;
 }
+
 .nav-link:hover {
     color: var(--link-color);
 }
+
 .profile {
     background: var(--light-bg);
     height: 80px;
 }
+
 .profile-form {
     float: right;
     line-height: inherit;
 }
+
 .profile-details {
-    margin-top: 4em;
+    margin: .5em 0 .5em 0;
+    width: 25%;
+
 }
+
+.timeline {
+    width: 50%;
+}
+.who-to-follow {
+    width: 25%;
+}
+
 .btn {
     border: 1px solid var(--main-link-color);
     color: var(--main-link-color);
@@ -68,17 +89,21 @@ a {
     padding: 8px;
     border-radius: 5px;
 }
+
 .btn-large {
     font-size: 1.3em;
 }
+
 .img-circle {
     border-radius: 100%;
     border: 4px solid var(--light-bg);
 }
+
 .text-right {
     text-align: right;
     padding: 1em;
 }
+
 .text-muted {
     color: var(--main-link-color);
 }
