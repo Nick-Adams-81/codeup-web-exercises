@@ -110,4 +110,8 @@ a {
 .text-muted {
     color: var(--main-link-color);
 }
+.media {
+    width: 100%;
+    background-color: lightblue;
+}
 
