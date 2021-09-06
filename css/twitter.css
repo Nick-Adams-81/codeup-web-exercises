@@ -79,11 +79,14 @@ a {
 .timeline {
     width: 50%;
     float: left;
+
 }
+
 .who-to-follow {
     width: 25%;
     float: right;
     padding: .5em;
+    margin-top: -8px;
 }
 
 .btn {
@@ -115,6 +118,9 @@ a {
 }
 .media {
     width: 100%;
-    background-color: lightblue;
+    padding: 1em;
+    margin-top: 1em;
+    background-color: #DDDDDD;
+
 }
 
