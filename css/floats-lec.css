@@ -11,10 +11,11 @@
     margin: 10px;
     float: left;
 }
+
 #box2 {
     background-color: #1969B2; /* blueish */
     height: 150px;
     width: 150px;
     margin: 10px;
-    float: left;
+    float: right;
 }
