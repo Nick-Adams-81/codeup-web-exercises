@@ -6,38 +6,31 @@ body, html {
     font-family: Arial, Ubuntu, sans-serif;
 }
 
+.message {
+    border: 1px solid lightgray;
+    margin: 8px;
+    font-size: 10px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
 .message-info {
-    background-color: blue;
-    width: 90%;
-    color: lightblue;
-    padding: .3em;
-    margin: .3em;
-    border: 1px solid dodgerblue;
+    color: #37308f;
+    background-color: #c6d7f6;
+
 }
 
 .message-success {
-    background-color: greenyellow;
-    width: 90%;
-    color: green;
-    padding: .3em;
-    margin: .3em;
-    border: 1px solid darkgreen;
+    color: #196836;
+    background-color: #c8ebd3;
 }
 
 .message-warning {
-    background-color: yellow;
-    width: 90%;
-    color: greenyellow;
-    padding: .3em;
-    margin: .3em;
-    border: 1px solid greenyellow;
+    color: #9f8f39;
+    background-color: #f4f2c3;
 }
 
 .message-error {
-    background-color: firebrick;
-    width: 90%;
-    color: red;
-    padding: .3em;
-    margin: .3em;
-    border: 1px solid darkred;
+    color: #740a24;
+    background-color: #f1cdd0;
 }
