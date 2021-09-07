@@ -9,7 +9,7 @@
     height: 100px;
     width: 100px;
     margin: 10px;
-    /* float: left; */
+    float: left;
 }
 #box2 {
     background-color: #1969B2; /* blueish */
