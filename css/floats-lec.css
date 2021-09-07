@@ -19,3 +19,16 @@
     margin: 10px;
     float: right;
 }
+
+p {
+    clear: left;
+}
+
+#box-3 {
+    background-color: #740a24;
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+
+
+}
