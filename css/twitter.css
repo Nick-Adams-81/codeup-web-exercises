@@ -32,7 +32,7 @@ a {
 
 .top-nav {
     background: var(--light-bg);
-    z-index: 100;
+    z-index: 1;
     position: fixed;
     width: 100%;
 }
@@ -77,6 +77,10 @@ a {
     width: 25%;
     float: left;
     margin-top: 3em;
+}
+
+.profile-items {
+    list-style: none;
 }
 
 .timeline {
