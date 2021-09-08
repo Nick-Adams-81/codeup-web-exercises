@@ -20,10 +20,15 @@
             display: flex;
             flex-direction: row;
             justify-content: center;
-            align-items: center;
+            align-items: flex-end;
             flex-wrap: wrap;
             align-content: center;
         }
+
+        #item-12 {
+            order: -1;
+        }
+
 
         .flex-item {
             background: #BFD45D;
@@ -46,7 +51,7 @@
     <div class="flex-item">Item 9</div>
     <div class="flex-item">Item 10</div>
     <div class="flex-item">Item 11</div>
-    <div class="flex-item">Item 12</div>
+    <div class="flex-item" id="item-12">Item 12</div>
 </div>
 
 </body>
