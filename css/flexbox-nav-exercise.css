@@ -18,6 +18,7 @@ ul {
 
 #ul-2 {
     justify-content: flex-end;
+    padding: .2em;
 }
 
 li {
