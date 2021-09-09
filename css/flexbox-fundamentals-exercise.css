@@ -20,7 +20,6 @@ h2, h3 {
     margin: 0 auto;
     width: 80%;
     display: flex;
-
 }
 
 .green-box {
@@ -47,6 +46,7 @@ section {
     display: flex;
     padding: 1em;
     width: 100%;
+
 
 }
 
@@ -136,7 +136,6 @@ section:nth-of-type(6) {
     background: coral;
     height: 14em;
     flex-wrap: wrap;
-    align-content: space-evenly;
     align-items: center;
     justify-content: space-between;
     /* enter needed declarations here */
