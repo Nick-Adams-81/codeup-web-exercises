@@ -3,7 +3,6 @@ nav {
     background-color: grey;
     list-style: none;
     display: flex;
-    flex-basis: auto;
     flex-direction: row;
 }
 
@@ -14,6 +13,7 @@ ul {
 
 #ul-1 {
     justify-content: flex-start;
+    padding-left: 0;
 }
 
 #ul-2 {
@@ -29,10 +29,10 @@ li {
 a {
     box-sizing: border-box;
     display: inline-block;
-    padding: .2rem;
+    padding: .5rem .2rem;
     color: black;
     align-items: flex-end;
-    margin: auto;
+
 }
 
 a:hover {
@@ -43,7 +43,5 @@ a:hover {
 p {
     font-size: 3em;
     padding: .2em;
-    justify-content: center;
-    align-items: center;
     margin: auto;
 }
