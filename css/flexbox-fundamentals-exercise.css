@@ -7,9 +7,7 @@ body {
     font-family: Chalkboard, sans-serif;
 }
 
-h1 {
-    text-align: center;
-}
+h1 {text-align: center;}
 
 h2, h3 {
     padding: 0;
@@ -19,14 +17,12 @@ h2, h3 {
 .container {
     margin: 0 auto;
     width: 80%;
-
 }
 
 .green-box {
     background: green;
     height: 1em;
     width: 2em;
-
 }
 
 .border {border: 2px solid black;}
@@ -65,7 +61,6 @@ section:nth-of-type(1) div:last-child {
     background: fuchsia;
     width: 3em;
     height: 1em;
-
 }
 
 .purple-box:nth-of-type(1) {
@@ -88,7 +83,6 @@ section:nth-of-type(3) {
     /* enter needed declarations here */
     justify-content: space-around;
     align-items: center;
-
 }
 
 section:nth-of-type(3) h3 {
@@ -147,5 +141,4 @@ section:nth-of-type(6) {
 
 .grey-box:nth-of-type(odd) {
     height: 4em;
-
 }
