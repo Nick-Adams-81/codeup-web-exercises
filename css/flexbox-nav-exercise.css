@@ -13,7 +13,8 @@ ul {
 
 #ul-1 {
     justify-content: flex-start;
-    padding-left: 0;
+    padding: .5em .2em 0 0;
+
 }
 
 #ul-2 {
@@ -46,3 +47,4 @@ p {
     padding: .2em;
     margin: auto;
 }
+
