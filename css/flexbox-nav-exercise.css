@@ -6,14 +6,20 @@ nav {
     flex-direction: row;
 }
 
+html, body {
+    font-family: 'Work Sans', sans-serif;
+}
+
 ul {
     box-sizing: border-box;
+    list-style: none;
 
 }
 
 #ul-1 {
     justify-content: flex-start;
     padding: .5em .2em 0 0;
+
 
 }
 
@@ -27,6 +33,7 @@ li {
     display: inline-block;
     border-radius: 5px;
 
+
 }
 
 a {
@@ -35,6 +42,7 @@ a {
     padding: .5rem .2rem;
     color: black;
     align-items: flex-end;
+    text-decoration: none;
 
 }
 
