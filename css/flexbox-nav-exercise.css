@@ -44,6 +44,7 @@ a {
     color: black;
     align-items: flex-end;
     text-decoration: none;
+    font-family: 'Work Sans', serif;
 
 }
 
@@ -72,12 +73,15 @@ footer {
 
 #vue {
     color: darkgreen;
+    padding: .5rem;
 }
 
 #ang {
     color: #740a24;
+    padding: .5rem;
 }
 
 #react {
     color: darkblue;
+    padding: .5rem;
 }
