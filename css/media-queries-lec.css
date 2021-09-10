@@ -8,10 +8,11 @@
 }
 
 /* Small devices (phones and pocket devices, 576 and up) */
-@media screen and (min-width:500px) {
+@media screen and (min-width:576px) {
     .box {
         display: inline-block;
-
+        border: 2px solid yellow;
+        border-radius: 100%;
     }
 }
 
@@ -20,14 +21,27 @@
     .box {
         display: flex;
         background-color: darkred;
+        border: 6px solid black;
+        border-radius: 0;
     }
 
 }
 
 /* Large devices (desktops, 992px and up) */
 @media screen and (min-width:992px) {
+    .box {
+        background-color: black;
+        border: 4px solid red;
+        display: inline-block;
+    }
 
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media screen and (min-width:1200px) { /* ... */ }
+@media screen and (min-width:1200px) {
+    .box {
+        background-color: dodgerblue;
+        border: 2px solid black;
+        padding: 10px;
+    }
+}
