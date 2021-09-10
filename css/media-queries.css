@@ -94,12 +94,6 @@ footer p {
         display: none;
     }
 
-    /*h1 {*/
-    /*    display: flex;*/
-    /*    justify-content: flex-start;*/
-    /*}*/
-
-
     nav {
         display: flex;
         flex-direction: row;
@@ -139,6 +133,31 @@ footer p {
     .header-img {
         height: 385px;
         width: 800px;
+    }
+
+    .main {
+        padding: 1em;
+        width: 45%;
+        margin: 0;
+        float: left;
+
+    }
+
+    .sub-section {
+        padding: 1em;
+        width: 45%;
+        float: left;
+    }
+
+    footer {
+        display: flex;
+        justify-content: flex-start;
+        float: left;
+        width: 100%;
+    }
+
+    footer p {
+        margin: 4em 1em;
     }
 
 
