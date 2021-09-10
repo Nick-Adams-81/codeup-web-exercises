@@ -2,13 +2,13 @@
     margin: 0;
     padding: 0;
     width: 100%;
-
 }
 
 .hidden-on-desktop {
     padding: 5px;
     display: flex;
     justify-content: center;
+
 }
 
 #main-con {
@@ -23,6 +23,8 @@
 h1 {
     display: flex;
     justify-content: center;
+    font-size: 3em;
+    margin: 0;
 
 }
 
@@ -31,6 +33,7 @@ h1 {
     list-style: none;
     flex-direction: column;
     padding: 5px;
+    justify-content: flex-end;
     width: 100%;
 }
 
