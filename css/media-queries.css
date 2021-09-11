@@ -8,7 +8,6 @@
     padding: 5px;
     display: flex;
     justify-content: center;
-
 }
 
 #main-con {
@@ -19,13 +18,11 @@
     justify-content: center;
 }
 
-
 h1 {
     display: flex;
     justify-content: center;
     font-size: 3em;
     margin: 0;
-
 }
 
 .nav-links {
@@ -145,7 +142,6 @@ footer p {
         width: 45%;
         margin: 0;
         float: left;
-
     }
 
     .sub-section {
