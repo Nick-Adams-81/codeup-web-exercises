@@ -42,3 +42,15 @@ for(let element in list) {
     console.log(element);
 }
 
+// arrow functions //
+
+//es-5 function
+function sayHello(name) {
+    return 'Hello ' + name + '!'
+}
+console.log(sayHello('nick'));
+
+// es-6 arrow function
+// parenthesis can be omitted w/ single argument
+const hello = name => `Hello ${name}!`
+console.log(hello('Nick'));
