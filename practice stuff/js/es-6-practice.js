@@ -86,5 +86,11 @@ const people1 = {name5:'codeup', age2: 4};
 const {name5, age2} = people1;
 console.log(name5, age2);
 
+// array destructuring
+
+const arr = [1, 2, 3, 4, 5];
+const[x, y] = arr;
+console.log(x, y)
+
 
 
