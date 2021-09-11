@@ -15,10 +15,20 @@ console.log(2 ** 8);
 
 //es-5 variable declaration
 
-var name = 'some name';
+var name1 = 'some name';
 
 //es-6 let and const declaration
 
-let name = 'some name';
+let name2 = 'some name';
 
 const newName = 'some name';
+
+// template strings //
+
+//es-5 string concatenation
+var num  = 5;
+console.log('you are ' + num + ' years old');
+
+//es-6 template literal w/ backticks
+const age = 39;
+console.log(`I am ${age} years old`)
