@@ -31,4 +31,14 @@ console.log('you are ' + num + ' years old');
 
 //es-6 template literal w/ backticks
 const age = 39;
-console.log(`I am ${age} years old`)
+console.log(`I am ${age} years old`);
+
+// for of loop //
+
+const list = [1, 2, 3, 4]
+for(let element in list) {
+    // will log the index of element in this list array
+    // can also use const instead of let
+    console.log(element);
+}
+
