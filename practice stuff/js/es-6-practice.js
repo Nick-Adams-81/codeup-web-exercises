@@ -55,7 +55,7 @@ console.log(sayHello('nick'));
 const hello = name => `Hello ${name}!`
 console.log(hello('Nick'));
 
-// object property assignment
+// object property assignment //
 
 //es-5
 var name3 = 'codeup';
@@ -72,5 +72,19 @@ const people = {
     age: 9
 }
 console.log(people);
+
+// object destructuring //
+
+//es-5
+var persons = {name:'nick', age:39};
+var name = persons.name;
+var age1 = persons.age;
+console.log(name, age1);
+
+//es-6
+const people1 = {name5:'codeup', age2: 4};
+const {name5, age2} = people1;
+console.log(name5, age2);
+
 
 
