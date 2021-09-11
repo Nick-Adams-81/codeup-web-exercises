@@ -54,3 +54,23 @@ console.log(sayHello('nick'));
 // parenthesis can be omitted w/ single argument
 const hello = name => `Hello ${name}!`
 console.log(hello('Nick'));
+
+// object property assignment
+
+//es-5
+var name3 = 'codeup';
+var person = {
+    name: name3,
+    age: 5
+}
+console.log(person);
+
+//es-6
+const name4 = 'codeup';
+const people = {
+    name4,
+    age: 9
+}
+console.log(people);
+
+
