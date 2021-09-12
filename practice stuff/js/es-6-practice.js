@@ -125,18 +125,16 @@ const totalSold = salesPeeps.reduce((total, person) => {
 console.log(totalSold);
 
 // another reduce example
-
 const countWords = (input) => {
     const words = input.split(' ');
-    const wordCountObj = words.reduce((wordCount, word) => {
-        if(typeof wordCount[word] === 'undefined') {
+    return words.reduce((wordCount, word) => {
+        if (typeof wordCount[word] === 'undefined') {
             wordCount[word] = 1;
         } else {
             wordCount[word] += 1
         }
         return wordCount
-    }, {})
-    return wordCountObj;
+    }, {});
 }
 console.log(countWords('hello hello how are you today hello'));
 
