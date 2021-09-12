@@ -140,8 +140,20 @@ console.log(countWords('hello hello how are you today hello'));
 
 //promises using the fetch API
 fetch('https://api.github.com/users')
+    //the response promise(.then)
     .then(res => console.log(res))
+    //the second promise for error catching(.catch)
     .catch(err => console.error(err));
+
+
+// object practice
+
+let personA = {}
+personA.name = 'Nick';
+personA.age = 39;
+personA.job = 'Web Dev';
+
+console.log(personA);
 
 
 
