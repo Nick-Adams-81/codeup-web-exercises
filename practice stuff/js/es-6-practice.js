@@ -160,10 +160,20 @@ let personB = {
     job: 'Waitress'
 }
 
+let personC = {
+    name: 'Chris',
+    age: 38,
+    job: 'Poker Floor'
+}
+
 let newPeople = []
 
-newPeople.unshift(personA, personB);
+newPeople.unshift(personA, personB, personC);
 console.log(newPeople);
+
+newPeople.forEach(person => {
+    console.log(person.name)
+})
 
 
 
