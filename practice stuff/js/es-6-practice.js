@@ -138,5 +138,10 @@ const countWords = (input) => {
 }
 console.log(countWords('hello hello how are you today hello'));
 
+//promises using the fetch API
+fetch('https://api.github.com/users')
+    .then(res => console.log(res))
+    .catch(err => console.error(err));
+
 
 
