@@ -112,7 +112,17 @@ const sum = numbers.reduce((total, currentNums) => {
 }, 0);
 console.log(sum);
 
+// another reduce example
+const salesPeeps = [
+    {name: 'Nick', sold:100},
+    {name: 'Doug', sold:50},
+    {name: 'Eric', sold:225}
+];
 
+const totalSold = salesPeeps.reduce((total, person) => {
+    return total + person.sold;
+}, 0);
+console.log(totalSold);
 
 
 
