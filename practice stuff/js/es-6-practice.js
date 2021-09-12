@@ -90,7 +90,20 @@ console.log(name5, age2);
 
 const arr = [1, 2, 3, 4, 5];
 const[x, y] = arr;
-console.log(x, y)
+console.log(x, y);
+
+
+// array methods map, filter, and reduce //
+
+// init variable to test map filter and reduce
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// map
+const increment = numbers.map(num => num + 1);
+console.log(increment);
+
+
+
 
 
 
