@@ -106,6 +106,14 @@ console.log(increment);
 const filteredNum = numbers.filter(num => num % 2 === 0);
 console.log(filteredNum);
 
+// reduce
+const sum = numbers.reduce((total, currentNums) => {
+    return total + currentNums;
+}, 0);
+console.log(sum);
+
+
+
 
 
 
