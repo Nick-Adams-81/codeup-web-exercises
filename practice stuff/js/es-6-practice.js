@@ -152,8 +152,18 @@ let personA = {}
 personA.name = 'Nick';
 personA.age = 39;
 personA.job = 'Web Dev';
-
 console.log(personA);
+
+let personB = {
+    name: 'Jenny',
+    age: 23,
+    job: 'Waitress'
+}
+
+let newPeople = []
+
+newPeople.unshift(personA, personB);
+console.log(newPeople);
 
 
 
