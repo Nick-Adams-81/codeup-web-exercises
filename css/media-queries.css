@@ -91,6 +91,10 @@ footer p {
 
 
 @media screen and (min-width: 750px) {
+    body {
+        max-width: 960px;
+        margin: auto;
+    }
     .hidden-on-desktop {
         display: none;
     }
@@ -147,13 +151,12 @@ footer p {
     .sub-section {
         padding: 1em;
         width: 45%;
-        float: left;
+        display: inline-block;
     }
 
     footer {
-        display: flex;
+        display: inline-block;
         justify-content: flex-start;
-        float: left;
         width: 100%;
     }
 
