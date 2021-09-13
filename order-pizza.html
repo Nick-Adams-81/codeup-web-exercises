@@ -31,29 +31,63 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </div>
 </nav>
-<div class="container-fluid">
+
+<div class="container">
     <div class="jumbotron jumbotron-fluid">
-
-            <h1 class="display-4">Welcome to Pizza World!</h1>
-
+        <h1 class="display-4">Welcome to Pizza World!</h1>
     </div>
+
     <br>
     <ul class="nav nav-pills">
         <li class="nav-item">
             <a class="nav-link" href="#"><h6>1<span class="badge badge-secondary"> </span>Size and Crust</h6></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#"> <h6>2 <span class="badge badge-secondary"> </span>cheese and Sauce</h6></a>
+            <a class="nav-link" href="#"><h6>2 <span class="badge badge-secondary"> </span>cheese and Sauce</h6></a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#"><h6>3 <span class="badge badge-secondary"> </span>Toppings</h6></a>
         </li>
     </ul>
-    <div class="card" style="width: 18rem;">
+
+    <div class="card" id="main-card"style="width: 100%;">
         <div class="card-body">
-            <h5 class="card-title">Hand Tossed</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title">Choose size and Crust</h5>
+            <div class="card" style="width: 100%;">
+                <div class="card-header">
+                    Hand Tossed
+                </div>
+                <div class="card-title">Garlic seasoned with a rich, buttery taste.</div>
+                <ul class="list-group list-group-flush">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                            Small(10")
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                            Medium(12")
+                        </label>
+                    </div>
+                </ul>
+            </div>
+            <br>
+
+            <div class="card" style="width: 100%;">
+                <div class="card-header">
+                    Crispy thin
+                </div>
+                <div class="card-title">Thin enough for optimum crispy to crunchy ratio.</div>
+                <ul class="list-group list-group-flush">
+
+                    <li class="list-group-item">Small(10")</li>
+                    <li class="list-group-item">Medium(12")</li>
+                </ul>
+            </div>
+
+            <a href="#" class="btn btn-primary" id="btn-1">Next step</a>
         </div>
     </div>
 
