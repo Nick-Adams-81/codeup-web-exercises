@@ -172,7 +172,7 @@ newPeople.unshift(personA, personB, personC);
 console.log(newPeople);
 
 newPeople.forEach(person => {
-    console.log(person.name)
+    console.log(person.name, person.job)
 })
 
 
