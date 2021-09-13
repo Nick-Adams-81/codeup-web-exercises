@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-md navbar-light bg-light">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Pizza World</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,20 +40,22 @@
     <br>
     <ul class="nav nav-pills">
         <li class="nav-item">
-            <a class="nav-link" href="#"><h6>1<span class="badge badge-secondary"> </span>Size and Crust</h6></a>
+            <a class="nav-link" href="#hand-tossed"><h6>1<span class="badge badge-secondary"> </span>Size and Crust</h6>
+            </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#"><h6>2 <span class="badge badge-secondary"> </span>cheese and Sauce</h6></a>
+            <a class="nav-link" href="#second-card"><h6>2 <span class="badge badge-secondary"> </span>cheese and Sauce
+            </h6></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#"><h6>3 <span class="badge badge-secondary"> </span>Toppings</h6></a>
+            <a class="nav-link" href="#card-3"><h6>3 <span class="badge badge-secondary"> </span>Toppings</h6></a>
         </li>
     </ul>
 
-    <div class="card" id="main-card"style="width: 100%;">
+    <div class="card" id="main-card" style="width: 100%;">
         <div class="card-body">
             <h5 class="card-title">Choose size and Crust</h5>
-            <div class="card" style="width: 100%;">
+            <div class="card" id="hand-tossed" style="width: 100%;">
                 <div class="card-header">
                     Hand Tossed
                 </div>
@@ -81,16 +83,157 @@
                 </div>
                 <div class="card-title">Thin enough for optimum crispy to crunchy ratio.</div>
                 <ul class="list-group list-group-flush">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                            Medium(12")
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                            Medium(12")
+                        </label>
+                    </div>
 
-                    <li class="list-group-item">Small(10")</li>
-                    <li class="list-group-item">Medium(12")</li>
                 </ul>
             </div>
 
-            <a href="#" class="btn btn-primary" id="btn-1">Next step</a>
+            <a href="#second-card" class="btn btn-success" id="btn-1">Next step</a>
         </div>
     </div>
+    <br>
 
+    <div class="card" id="second-card" style="width: 100%;">
+        <div class="card-body">
+            <h5 class="card-title">Choose Cheese and Sauce</h5>
+
+            <div class="card" style="width: 100%;">
+                <div class="card-body">
+                    <h5 class="card-header">Cheese</h5>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">How much Cheese?</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Light</option>
+                            <option>Normal</option>
+                            <option>Extra</option>
+                            <option>Double!!!</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="card" style="width: 100%;">
+                <div class="card-body">
+                    <h5 class="card-header">Da Sauce</h5>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">What type?</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Tomato</option>
+                            <option>Marinara</option>
+                            <option>BBQ</option>
+                            <option>Alfredo</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">How much?</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Light</option>
+                            <option>Normal</option>
+                            <option>Extra</option>
+                            <option>Way too Much!!!</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <a href="#main-card" class="btn btn-primary" id="btn-1">Previous step</a>
+            <a href="#card-3" class="btn btn-success" id="btn-1">Next step</a>
+        </div>
+    </div>
+    <br>
+    <div class="card" id="card-3"style="width: 100%;">
+        <div class="card-body">
+            <h5 class="card-title">Choose Toppings</h5>
+            <div class="card-body">
+                <div class="card" style="width: 100%;">
+                    <div class="card-body">
+                        <h5 class="card-header">Choose Meats</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                   value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                Peperoni
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                   value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                Ham
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                   value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                Philly Steak
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                   value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                Bacon
+                            </label>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card" style="width: 100%;">
+                <div class="card-body">
+                    <div class="card-header">Choose Non Meats</div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                               value="option1" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                            Green Peppers
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                               value="option1" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                            Mushrooms
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                               value="option1" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                            Onions
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                               value="option1" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                            Jalepenio Peppers
+                        </label>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <a href="#" class="btn btn-primary" id="btn-1">Checkout</a>
+        </div>
+    </div>
 </div>
 
 </body>
