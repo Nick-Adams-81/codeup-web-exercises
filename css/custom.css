@@ -2,6 +2,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 a:hover {
@@ -10,5 +11,10 @@ a:hover {
 .jumbotron-fluid {
     background-image: url("https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHBpenphfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60");
     height: 15em;
+}
 
+@media screen and (max-width: 550px) {
+    .jumbotron-fluid {
+        display: none;
+    }
 }
