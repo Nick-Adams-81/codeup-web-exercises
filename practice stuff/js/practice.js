@@ -120,12 +120,26 @@
         return 'Your doggie is ' + newDogAge + ' in human years and you are ' + humanAgeInDogYears + ' in doggie years!';
 
     }
+    let hasTaco = ['blueberry', 'banana', 'yogurt', 'cereal', 'brisket and egg taco'];
+    let noTaco = ['parfait', 'omelette', 'protein shake', 'fasting'];
 
-    console.log(dogYears('8', 39));
-    console.log(tellFortune(3, 'jenny', 'dallas', 'programmer'));
-    console.log('--------------------------------------------------');
-    console.log(tellFortune(5, 'carissa', 'sacramento', 'poker dealer'));
-    console.log('--------------------------------------------------');
-    console.log(tellFortune(0, 'i\'m single', 'hawaii', 'freeloader'));
+    function tacoTuesday(input) {
+        for(let i = 0; i < input.length; i++) {
+            if(input[i].includes('taco')) {
+                return true;
+            }
+        }
+        return false;
+
+    }
+
+    console.log(tacoTuesday(hasTaco));
+    console.log(tacoTuesday(noTaco));
+    // console.log(dogYears('8', 39));
+    // console.log(tellFortune(3, 'jenny', 'dallas', 'programmer'));
+    // console.log('--------------------------------------------------');
+    // console.log(tellFortune(5, 'carissa', 'sacramento', 'poker dealer'));
+    // console.log('--------------------------------------------------');
+    // console.log(tellFortune(0, 'i\'m single', 'hawaii', 'freeloader'));
 
 })();
