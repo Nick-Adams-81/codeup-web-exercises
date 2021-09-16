@@ -169,11 +169,22 @@ let personC = {
 let newPeople = []
 
 newPeople.unshift(personA, personB, personC);
-console.log(newPeople);
+//console.log(newPeople);
 
-newPeople.forEach(person => {
-    console.log(person.name, person.job)
-})
+// newPeople.forEach(person => {
+//     console.log(person.name, person.job)
+// })
+
+
+const isPalindrome = (input) => {
+    if(typeof input !== 'string') return false;
+    let forward = input.toLowerCase();
+    let reverse = input.split('').reverse().join('').toLowerCase();
+    return forward === reverse
+
+}
+
+console.log(isPalindrome(8));
 
 
 
