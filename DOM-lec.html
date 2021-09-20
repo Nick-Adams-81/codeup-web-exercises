@@ -6,7 +6,8 @@
     <title>The Haberdashery</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <!--    BS CSS-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
     <!-- Any custom CSS below here-->
     <style>
@@ -14,9 +15,11 @@
             background-color: #faebd7;
             color: #1B0F1C;
         }
+
         body {
             background-color: #DBA97E;
         }
+
         #top-header {
             background-color: #97719F;
             color: antiquewhite;
@@ -29,7 +32,8 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Howell's <i class="bi-shop mx-1"></i></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -49,7 +53,8 @@
     </div>
 </nav>
 
-<div class="modal fade" id="aboutUsModal" tabindex="-1" aria-labelledby="aboutUsModal" style="display: none;" aria-hidden="true">
+<div class="modal fade" id="aboutUsModal" tabindex="-1" aria-labelledby="aboutUsModal" style="display: none;"
+     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
@@ -59,7 +64,8 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas
+                    eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
 
                 <p>Lorem ipsum dolor sit amet, consectetur.</p>
             </div>
@@ -82,7 +88,8 @@
     <div class="row h-100 m-auto">
 
         <div class="col-sm-3 d-flex align-items-center justify-content-center">
-            <p>I offer: <span><em>hats,</em><br>hat accessories,<br> <strong>hat opportunities,</strong><br> and hat perspectives.</span></p>
+            <p>I offer: <span><em>hats,</em><br>hat accessories,<br> <strong>hat opportunities,</strong><br> and hat perspectives.</span>
+            </p>
         </div>
 
         <div class="col-sm-6 d-flex align-items-center justify-content-center flex-column mt-5 mt-sm-0">
@@ -124,9 +131,15 @@
 </footer>
 
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 <script>
     //~*~ Locating individual elements
     var topHeader = document.getElementById('top-header');
@@ -145,7 +158,7 @@
     //console.log(listItems)
 
     //Loop through the hatList and print our nodes
-    for(let i = 0; i < listItems.length; i++) {
+    for (let i = 0; i < listItems.length; i++) {
         console.log(listItems[i]);
     }
     //~*~ Accessing form input
@@ -158,7 +171,7 @@
 
     //Instead of printing a list of nodes, let's print some text - What HTML is INSIDE our <li>?
     var topSellers = document.getElementsByClassName('hat-sold');
-    for(let i = 0; i < topSellers.length; i++) {
+    for (let i = 0; i < topSellers.length; i++) {
         console.log(topSellers[i].innerHTML);
     }
 
@@ -166,19 +179,24 @@
     //Uh oh - these were last month's top seller, WOOPS -
     //let's update our <li> to show "Hat TBD" and let's be STRONG about it!
 
-    for(let i = 0; i < topSellers.length; i++) {
+    for (let i = 0; i < topSellers.length; i++) {
         topSellers[i].innerHTML = '<strong> hat TBD </strong>';
     }
     //innerText vs innerHTML
     //"Our Top Sellers" seems odd now as well - let's adjust!
-
+    var bestSeller = document.getElementById('best-seller');
+    bestSeller.innerText = 'Will update soon!';
     //Perhaps a little EMPHASIS will assist - will innerText help?
 
     //Attribute methods: hasAttribute, getAttribute, setAttribute, removeAttribute
-
+    var bottomLink = document.getElementById('bottom-link');
     //hasAttribute: return a BOOLEAN if the element has this attribute
+
+    console.log(bottomLink.hasAttribute('href'));
     //getAttribute: what's that attribute's value? [the right side of the equation]
+    console.log(bottomLink.getAttribute('href'));
     //setAttribute: let's change that attribute's value!
+    bottomLink.setAttribute('href', 'https://duckduckgo.com');
 
     //Accessing or Modifying styles
 
