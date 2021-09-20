@@ -150,18 +150,25 @@
     }
     //~*~ Accessing form input
     var placeholder = document.forms.hatSearch[0].placeholder;
-    console.log(placeholder);
+    //console.log(placeholder);
 
     //~*~ Accessing / Modifying Element properties [so I've got a collection of this stuff - what now?]
     //Accessing innerHTML
 
 
     //Instead of printing a list of nodes, let's print some text - What HTML is INSIDE our <li>?
+    var topSellers = document.getElementsByClassName('hat-sold');
+    for(let i = 0; i < topSellers.length; i++) {
+        console.log(topSellers[i].innerHTML);
+    }
 
     //Modifying innerHTML
     //Uh oh - these were last month's top seller, WOOPS -
     //let's update our <li> to show "Hat TBD" and let's be STRONG about it!
 
+    for(let i = 0; i < topSellers.length; i++) {
+        topSellers[i].innerHTML = '<strong> hat TBD </strong>';
+    }
     //innerText vs innerHTML
     //"Our Top Sellers" seems odd now as well - let's adjust!
 
