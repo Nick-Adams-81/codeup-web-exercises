@@ -1,9 +1,9 @@
 'use strict';
 
-// set interval
+// clear interval
 var count = 0;
 var max = 10;
-var interval = 1000;
+var interval = 100;
 
 var intervalId = setInterval(function() {
     if(count >= max) {
@@ -14,3 +14,10 @@ var intervalId = setInterval(function() {
         console.log('repeating ' + count)
     }
 }, interval);
+
+
+// set timeout
+var delay = 5000;
+var timeout2 = setTimeout(function() {
+    alert('this is a delayed hello!');
+}, delay);
