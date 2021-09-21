@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>DOM: Query and Modify</title>
@@ -8,6 +8,7 @@
 
 <h1 id="main-header">Hello World!</h1>
 <button id="h1-text-change">Change this h1</button>
+<button id="h1-change-back">Change this h1 back</button>
 <ul>
     <li data-dbid="1">Item 1</li>
     <li data-dbid="2">Item 2</li>
@@ -36,11 +37,17 @@
         var mainHeader = document.getElementById('main-header');
         var btn1 = document.getElementById('h1-text-change');
         btn1.addEventListener('click', changeHeader);
+        var btn5 = document.getElementById('h1-change-back')
+        btn5.addEventListener('click', changeHeaderBack)
 
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
         function changeHeader() {
             mainHeader.innerHTML = 'JavaScript is cool!';
+        }
+
+         function changeHeaderBack() {
+            mainHeader.innerHTML = 'Hello World!'
         }
 
 
@@ -53,7 +60,6 @@
         function changeColor() {
             subHeader.style.color = 'blue';
         }
-
 
         // TODO: Uncomment the next line and get all list items
         var listItems = document.getElementsByTagName('li');
