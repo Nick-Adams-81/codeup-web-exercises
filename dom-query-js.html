@@ -30,12 +30,13 @@
 <button id="p-tag">change the paragraph!</button>
 
 <script>
-    (function() {
+    (function () {
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
-         var mainHeader = document.getElementById('main-header');
-         var btn1 = document.getElementById('h1-text-change');
-         btn1.addEventListener('click', changeHeader);
+        var mainHeader = document.getElementById('main-header');
+        var btn1 = document.getElementById('h1-text-change');
+        btn1.addEventListener('click', changeHeader);
+
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
         function changeHeader() {
@@ -43,11 +44,10 @@
         }
 
 
-
         // TODO: Uncomment the next line and get the sub header element by id
-         var subHeader = document.getElementById('sub-header');
+        var subHeader = document.getElementById('sub-header');
         var btn2 = document.getElementById('h2-color-change');
-        btn2.addEventListener('click', changeColor)
+        btn2.addEventListener('click', changeColor);
 
         // TODO: Set the text color of subHeader to blue
         function changeColor() {
@@ -56,28 +56,29 @@
 
 
         // TODO: Uncomment the next line and get all list items
-         var listItems = document.getElementsByTagName('li');
+        var listItems = document.getElementsByTagName('li');
         var btn3 = document.getElementById('li-color-change');
-        btn3.addEventListener('click', listItemColorChange)
+        btn3.addEventListener('click', listItemColorChange);
 
         // TODO: Set text color on every other list item to grey
         // TODO: Set text color of li with dbid = 1 to blue
 
         function listItemColorChange() {
-            for(var i = 0; i < listItems.length; i++) {
-                if(i % 2 !== 0) {
+            for (var i = 0; i < listItems.length; i++) {
+                if (i % 2 !== 0) {
                     listItems[i].style.color = 'grey';
                 }
             }
             //listItems[0].style.color = 'blue';
             var dbid = document.querySelector('li[data-dbid="1"]');
-            dbid.style.color = 'blue'
+            dbid.style.color = 'blue';
         }
 
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        var btn4 = document.getElementById('p-tag')
-        btn4.addEventListener('click', changeParagraph)
+        var btn4 = document.getElementById('p-tag');
+        btn4.addEventListener('click', changeParagraph);
+
         function changeParagraph() {
             var subParagraphs = document.getElementsByClassName('sub-paragraph');
 
