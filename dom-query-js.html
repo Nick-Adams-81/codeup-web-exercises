@@ -56,19 +56,28 @@
 
         // TODO: Uncomment the next line and get all list items
          var listItems = document.getElementsByTagName('li');
+        var btn3 = document.getElementById('li-color-change');
+        btn3.addEventListener('click', listItemColorChange)
 
         // TODO: Set text color on every other list item to grey
         // TODO: Set text color of li with dbid = 1 to blue
-        for(var i = 0; i < listItems.length; i++) {
-            if(i % 2 !== 0) {
-                listItems[i].style.color = 'grey';
+
+        function listItemColorChange() {
+            for(var i = 0; i < listItems.length; i++) {
+                if(i % 2 !== 0) {
+                    listItems[i].style.color = 'grey';
+                }
             }
+            //listItems[0].style.color = 'blue';
+            var dbid = document.querySelector('li[data-dbid="1"]');
+            dbid.style.color = 'blue'
         }
-        //listItems[0].style.color = 'blue';
-        var dbid = document.querySelector('li[data-dbid="1"]');
-        dbid.style.color = 'blue'
-        console.log(dbid);
+
+
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+        function changeParagraph() {
+
+        }
          var subParagraphs = document.getElementsByClassName('sub-paragraph');
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
