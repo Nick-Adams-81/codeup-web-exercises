@@ -27,6 +27,7 @@
     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
+<button id="p-tag">change the paragraph!</button>
 
 <script>
     (function() {
@@ -75,13 +76,15 @@
 
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+        var btn4 = document.getElementById('p-tag')
+        btn4.addEventListener('click', changeParagraph)
         function changeParagraph() {
+            var subParagraphs = document.getElementsByClassName('sub-paragraph');
 
+            // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+            subParagraphs[0].innerText = 'Mission Accomplished!';
         }
-         var subParagraphs = document.getElementsByClassName('sub-paragraph');
 
-        // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerText = 'Mission Accomplished!';
     })();
 </script>
 </body>
