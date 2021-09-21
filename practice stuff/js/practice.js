@@ -135,9 +135,20 @@
     }
 
 
+    // tuesday warmup
 
-    console.log(tacoTuesday(hasTaco));
-    console.log(tacoTuesday(noTaco));
+    function evenNums(nums){
+        for (var i = 1; i <= nums; i++) {
+            if(i % 2 === 0) {
+                console.log(i)
+            }
+        }
+    }
+
+    evenNums(10);
+
+    // console.log(tacoTuesday(hasTaco));
+    // console.log(tacoTuesday(noTaco));
     // console.log(dogYears('8', 39));
     // console.log(tellFortune(3, 'jenny', 'dallas', 'programmer'));
     // console.log('--------------------------------------------------');
