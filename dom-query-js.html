@@ -15,7 +15,9 @@
     <li data-dbid="4">Item 4</li>
     <li data-dbid="5">Item 5</li>
 </ul>
+<button id="li-color-change">change the colors of this list!</button>
 <h2 id="sub-header">Hello Again.</h2>
+<button id="h2-color-change">change the color of hello again!</button>
 <p class="sub-paragraph">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -43,9 +45,14 @@
 
         // TODO: Uncomment the next line and get the sub header element by id
          var subHeader = document.getElementById('sub-header');
+        var btn2 = document.getElementById('h2-color-change');
+        btn2.addEventListener('click', changeColor)
 
         // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = 'blue';
+        function changeColor() {
+            subHeader.style.color = 'blue';
+        }
+
 
         // TODO: Uncomment the next line and get all list items
          var listItems = document.getElementsByTagName('li');
