@@ -18,7 +18,8 @@
 </ul>
 <button id="li-color-change">change the colors of this list!</button>
 <h2 id="sub-header">Hello Again.</h2>
-<button id="h2-color-change">change the color of hello again!</button>
+<button id="h2-color-change">Make this header blue</button>
+<button id="red">Make this header red</button>
 <p class="sub-paragraph">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -55,10 +56,18 @@
         var subHeader = document.getElementById('sub-header');
         var btn2 = document.getElementById('h2-color-change');
         btn2.addEventListener('click', changeColor);
+        btn2.style.color = 'blue'
+        var btn6 = document.getElementById('red');
+        btn6.style.color = 'red'
+        btn6.addEventListener('click', changeColorToRed)
 
         // TODO: Set the text color of subHeader to blue
         function changeColor() {
             subHeader.style.color = 'blue';
+        }
+
+        function changeColorToRed() {
+            subHeader.style.color = 'red';
         }
 
         // TODO: Uncomment the next line and get all list items
