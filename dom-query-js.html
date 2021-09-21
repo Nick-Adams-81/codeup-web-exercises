@@ -7,6 +7,7 @@
 <body>
 
 <h1 id="main-header">Hello World!</h1>
+<button id="h1-text-change">Change this h1</button>
 <ul>
     <li data-dbid="1">Item 1</li>
     <li data-dbid="2">Item 2</li>
@@ -30,9 +31,15 @@
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
          var mainHeader = document.getElementById('main-header');
+         var btn1 = document.getElementById('h1-text-change');
+         btn1.addEventListener('click', changeHeader);
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = 'JavaScript is cool!'
+        function changeHeader() {
+            mainHeader.innerHTML = 'JavaScript is cool!';
+        }
+
+
 
         // TODO: Uncomment the next line and get the sub header element by id
          var subHeader = document.getElementById('sub-header');
@@ -50,8 +57,10 @@
                 listItems[i].style.color = 'grey';
             }
         }
-        listItems[0].style.color = 'blue';
-
+        //listItems[0].style.color = 'blue';
+        var dbid = document.querySelector('li[data-dbid="1"]');
+        dbid.style.color = 'blue'
+        console.log(dbid);
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
          var subParagraphs = document.getElementsByClassName('sub-paragraph');
 
