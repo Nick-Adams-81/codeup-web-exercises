@@ -6,5 +6,7 @@ $(document).ready(function () {
        $(this).css('background-color', 'blue')
    })
 
-
+    $('p').on('dblclick', function() {
+        $(this).css('font-size', '18px')
+    })
 });
