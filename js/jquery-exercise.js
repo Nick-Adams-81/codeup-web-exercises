@@ -1,5 +1,6 @@
 'use strict'
 
 $(document).ready(function() {
-    alert('the page has loaded!')
-})
+    alert('the DOM has loaded!');
+     $('.div1').css('background-color', 'blue');
+});
