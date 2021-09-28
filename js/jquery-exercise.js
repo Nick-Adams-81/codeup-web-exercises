@@ -1,6 +1,7 @@
 'use strict'
 
-$(document).ready(function() {
-    alert('the DOM has loaded!');
-     $('.div1').css('background-color', 'blue');
+$(document).ready(function () {
+    $('.div1').css('background-color', 'blue');
+    var li1 = $('#li-1').html()
+    alert(li1)
 });
