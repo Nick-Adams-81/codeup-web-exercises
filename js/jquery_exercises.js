@@ -9,4 +9,8 @@ $(document).ready(function () {
     $('p').on('dblclick', function() {
         $(this).css('font-size', '18px')
     })
+
+    $('li').on('hover', function() {
+        $(this).css('color', 'red')
+    })
 });
