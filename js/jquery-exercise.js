@@ -1,7 +1,9 @@
 'use strict'
 
 $(document).ready(function () {
-    $('.div1').css('background-color', 'blue');
     var li1 = $('#li-1').html()
-    alert(li1)
+    var li2 = $('#li-2').html()
+    alert(li1);
+    alert(li2);
+    $('.codeup').css('border', '1px solid red');
 });
