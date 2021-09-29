@@ -7,7 +7,7 @@ var sound = new Audio('audio/cookie-down.mp3');
 var thirtyLives = 'ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightbaEnter';
 // empty string to store user input
 var code = '';
-
+document.documentElement.style.setProperty('--animate-duration', '.5s')
 $(document).keyup(function(event){
     console.log(event.key);
     // adding user input to empty string for comparison to konami code

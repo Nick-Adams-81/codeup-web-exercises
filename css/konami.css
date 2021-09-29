@@ -5,4 +5,5 @@ body {
 h1 {
     color: darkgreen;
     margin-left: 40%;
+    --animate-duration: 2.5s;
 }
