@@ -5,32 +5,11 @@
 </head>
 <body>
 <h1>Konami Code</h1>
-
+<button onclick="window.location.reload(true)">reset page</button>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
 </script>
-<script>
-    "use strict";
-    var a = String.fromCharCode(65);
-    var b = String.fromCharCode(66);
-    var up = String.fromCharCode(38);
-    var down = String.fromCharCode(40);
-    var left = String.fromCharCode(37);
-    var right = String.fromCharCode(39);
-    var enter = String.fromCharCode(13);
+<script src="js/konami.js">
 
-    var thirtyLives = [up, up, down, down, left, right, left, right, b, a, enter];
-    var code = [];
-
-    $(document).keyup(function(event){
-        code.push(event.keyCode);
-
-            if(code.length === thirtyLives.length) {
-                alert('You have 30 lives!');
-            }
-
-        console.log(code);
-
-    });
 </script>
 </body>
 </html>
