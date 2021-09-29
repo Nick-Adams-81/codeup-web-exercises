@@ -10,30 +10,26 @@
 </script>
 <script>
     "use strict";
-    var a = String.fromCharCode(65)
-    console.log(a)
-    var b = String.fromCharCode(66)
-    console.log(b)
-    var up = String.fromCharCode(38)
-    console.log(up)
-    var down = String.fromCharCode(40)
-    console.log(down)
-    var left = String.fromCharCode(37)
-    console.log(left)
-    var right = String.fromCharCode(39)
-    console.log(right)
-    var enter = String.fromCharCode(13)
-    console.log(enter)
-    var thirtyLives = [up, up, down, down, left, right, left, right, b, a, enter]
-    console.log(thirtyLives)
+    var a = String.fromCharCode(65);
+    var b = String.fromCharCode(66);
+    var up = String.fromCharCode(38);
+    var down = String.fromCharCode(40);
+    var left = String.fromCharCode(37);
+    var right = String.fromCharCode(39);
+    var enter = String.fromCharCode(13);
+
+    var thirtyLives = [up, up, down, down, left, right, left, right, b, a, enter];
+    var code = [];
+
     $(document).keyup(function(event){
+        code.push(event.keyCode);
 
-        //     if(event === thirtyLives.length) {
-        //         alert('You have 30 lives!')
-        //     }
+            if(code.length === thirtyLives.length) {
+                alert('You have 30 lives!');
+            }
 
-        //
-         console.log(event.keyCode)
+        console.log(code);
+
     });
 </script>
 </body>
