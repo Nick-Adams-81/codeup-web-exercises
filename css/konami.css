@@ -4,22 +4,29 @@ body {
 
 h1 {
     color: darkgreen;
-    margin-left: 40%;
+    margin-left: 42%;
     --animate-duration: 2.5s;
 }
 
 #blink {
     background-color: darkgreen;
     height: 2px;
-    width: 10px;
+    width: 15px;
     display: inline-block;
+    margin-left: 5px;
 }
 
 button {
     background-color: black;
     color: grey;
     height: 45px;
-    width: 130px;
+    width: 200px;
     margin-left: 41.5%;
     border: 2px solid red;
+    border-radius: 10px;
 }
+
+#btn-2 {
+    margin-top: 50px;
+}
+
