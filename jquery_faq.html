@@ -51,24 +51,62 @@
     <dt>stuff</dt>
     <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, odit?</dd>
     <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, nam!</dd>
-
 </dl>
-<a href="#" id="highlight">Click to toggle text</a>
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-<script>
-    $(document).ready(function() {
+<h3>Some park</h3>
+<ul>
+    <li>stuff</li>
+    <li>more stuff</li>
+    <li>less stuff</li>
+    <li>no stuff at all</li>
+</ul>
 
-        $('#highlight').click(function(e) {
+<h3>another park</h3>
+<ul>
+    <li>more stuff</li>
+    <li>stuff</li>
+    <li>less stuff</li>
+    <li>#facts</li>
+</ul>
+
+<h3>random park</h3>
+<ul>
+    <li>fact one</li>
+    <li>two</li>
+    <li>another random fact</li>
+    <li>more stuff</li>
+</ul>
+
+<button>Change color</button>
+
+
+<a href="#" id="highlight">Click to toggle text</a>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+
+        $('#highlight').click(function (e) {
             e.preventDefault()
             $('dd').toggleClass('invisible')
         })
 
-        $('dt').hover(function() {
+        $('dt').hover(function () {
             $(this).css('color', 'yellow')
-        }, function() {
+        }, function () {
             $(this).css('color', 'black')
         })
 
+        $('button').click(function () {
+            $('ul').each(function () {
+                $(this).children().last().css('background-color', 'yellow')
+            })
+        })
+
+        $('h3').click(function () {
+            $('ul').each(function (i) {
+                $(this).children().first().css('font-weight', 'bold')
+            })
+        })
     })
 </script>
 </body>
