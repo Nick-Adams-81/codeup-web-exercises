@@ -1,23 +1,36 @@
 "use strict";
 
-// sound variable
+// sound variables
 var sound = new Audio('audio/cookie-down.mp3');
 var soundEffect = new Audio('audio/sound3.wav');
+
+// adding sound effect to button 1
+$('#btn-1').hover(function() {
+    soundEffect.play();
+}, function() {
+    soundEffect.pause()l
+})
+
+// hiding the player buttons until code is inputted
 $('#btn-2').css('display', 'none');
-$('#btn-3').css('display', 'none')
+$('#btn-3').css('display', 'none');
+
 // correct konami code
 var thirtyLives = 'ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightbaEnter';
+
 // empty string to store user input
 var code = '';
-document.documentElement.style.setProperty('--animate-duration', '.5s')
+document.documentElement.style.setProperty('--animate-duration', '.5s');
 
 $(document).keyup(function(event){
-    console.log(event.key);
+
     // adding user input to empty string for comparison to konami code
     code += event.key;
+
     // comparing user input string to correct konami code
     if(code === thirtyLives) {
         alert('You have added 30 lives!');
+
         // setting the background color to black
         $('body').css('background-color', 'black');
 
