@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .invisible {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+<dl>
+    <h1>FAQ about stuff and things</h1>
+    <dt>Yosemitie</dt>
+    <dd>Has rocks and stuff</dd>
+    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, repudiandae?</dd>
+    <br>
+    <dt>the Grand Canyon</dt>
+    <dd>its a big hole in the ground</dd>
+    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, quis.</dd>
+    <br>
+    <dt>coding</dt>
+    <dd>its really cool!</dd>
+    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, nisi.</dd>
+    <br>
+    <dt>Computers</dt>
+    <dd>Computers are cool</dd>
+    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, quidem!</dd>
+    <br>
+    <dt>Dogs</dt>
+    <dd>mine is a pit bull</dd>
+    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, tempore.</dd>
+    <br>
+    <dt>cats</dt>
+    <dd>im not a fan of cats</dd>
+    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, libero!</dd>
+    <br>
+    <dt>music</dt>
+    <dd>i like all sorts of music</dd>
+    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, odio!</dd>
+    <br>
+    <dt>travel</dt>
+    <dd>i want to go to europe some day</dd>
+    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, tempore.</dd>
+    <br>
+    <dt>art</dt>
+    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, veniam.</dd>
+    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, vitae.</dd>
+    <br>
+    <dt>stuff</dt>
+    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, odit?</dd>
+    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, nam!</dd>
+
+</dl>
+<a href="#" id="highlight">Click to toggle text</a>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function() {
+
+        $('#highlight').click(function(e) {
+            e.preventDefault()
+            $('dd').toggleClass('invisible')
+        })
+
+        $('dt').hover(function() {
+            $(this).css('color', 'yellow')
+        }, function() {
+            $(this).css('color', 'black')
+        })
+
+    })
+</script>
+</body>
+</html>
