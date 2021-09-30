@@ -24,9 +24,9 @@ $(document).keyup(function(event){
         $('h1').css('display', 'none');
 
         // contra main logo
-        $('img').attr('src', 'https://dreamteck.io/images/blog/upld/mitko_contra_example.jpg').css('height', '500px').css('width', '100%').attr('class', 'animate__animated animate__fadeInRight').css('--animate-duration', '2s').css('margin-top', '-20px')
+        $('img').attr('src', 'https://dreamteck.io/images/blog/upld/mitko_contra_example.jpg').css('height', '350px').css('width', '100%').attr('class', 'animate__animated animate__fadeInRight').css('--animate-duration', '2s').css('margin-top', '-20px')
         // konami logo
-        $('#konami').attr('src', 'https://i.ytimg.com/vi/DIzNo9Y6408/hqdefault.jpg').css('height', '120px').css('width', '200px').css('padding-top', '5px').attr('class', 'animate__animated animate__fadeIn').css('--animate-duration', '6s').css('margin-bottom', '7px').css('margin-left', '500px');
+        $('#konami').attr('src', 'https://i.ytimg.com/vi/DIzNo9Y6408/hqdefault.jpg').css('height', '120px').css('width', '200px').css('padding-top', '5px').attr('class', 'animate__animated animate__fadeIn').css('--animate-duration', '6s').css('margin-bottom', '7px').css('margin-left', '500px').css('margin-top', '23px');
 
         // hidig the try code again button
         $('#btn-1').css('display', 'none');
