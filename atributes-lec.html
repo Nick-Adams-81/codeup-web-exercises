@@ -6,21 +6,18 @@
 </head>
 <body>
 <div>
-    <ul id="li1">
-        <li>item 1</li>
-        <li>item 2</li>
-        <li>item 3</li>
-    </ul>
+    <h4>unordered list</h4>
+    <div id="li1">
+        <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+        </ul>
+    </div>
+
 </div>
 
-<h3 id="national-parks-heading">National Parks</h3>
-<ul id="national-parks">
-    <li>Arches</li>
-    <li>Badlands</li>
-    <li>Carlsbad Caverns</li>
-    <li>Denali</li>
-    <li>Everglades</li>
-</ul>
+
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script>
     'use strict';
@@ -34,8 +31,8 @@
         //parent
         $('li').parent().css('background-color', 'orange')
         // next
-        $('#li1').next().css('padding', '90px')
-        $('#national-parks-heading').next().css('background-color', 'salmon');
+        $('h4').next().css('font-size', '20px')
+
 
     })
 </script>
