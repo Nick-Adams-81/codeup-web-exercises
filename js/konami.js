@@ -8,7 +8,7 @@ var soundEffect = new Audio('audio/sound3.wav');
 $('#btn-1').hover(function() {
     soundEffect.play();
 }, function() {
-    soundEffect.pause()l
+    soundEffect.pause();
 })
 
 // hiding the player buttons until code is inputted
