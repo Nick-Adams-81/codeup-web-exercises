@@ -98,15 +98,23 @@
 
         $('button').click(function () {
             $('ul').each(function () {
-                $(this).children().last().css('background-color', 'yellow')
+                $(this).children().last().css({'background-color': 'yellow', 'width': '100px'})
             })
         })
 
         $('h3').click(function () {
-            $('ul').each(function (i) {
+            $('ul').each(function () {
                 $(this).children().first().css('font-weight', 'bold')
             })
         })
+
+        $('li').click(function() {
+            $('ul').each(function() {
+                $(this).children().first().css('color', 'blue')
+            })
+        })
+
+
     })
 </script>
 </body>
