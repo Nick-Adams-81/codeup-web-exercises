@@ -7,3 +7,19 @@ h1 {
     margin-left: 40%;
     --animate-duration: 2.5s;
 }
+
+#blink {
+    background-color: darkgreen;
+    height: 2px;
+    width: 10px;
+    display: inline-block;
+}
+
+button {
+    background-color: darkgreen;
+    color: red;
+    height: 45px;
+    width: 130px;
+    margin-left: 41.5%;
+    border: 2px solid red;
+}

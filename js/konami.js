@@ -2,12 +2,13 @@
 
 // sound variable
 var sound = new Audio('audio/cookie-down.mp3');
-
+$('btn-2').css('display', 'none');
 // correct konami code
 var thirtyLives = 'ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightbaEnter';
 // empty string to store user input
 var code = '';
 document.documentElement.style.setProperty('--animate-duration', '.5s')
+
 $(document).keyup(function(event){
     console.log(event.key);
     // adding user input to empty string for comparison to konami code
@@ -15,9 +16,11 @@ $(document).keyup(function(event){
     // comparing user input string to correct konami code
     if(code === thirtyLives) {
         alert('You have added 30 lives!');
-        $('body').css('background-color', 'green');
+        $('body').css('background-color', 'black');
         $('h1').css('display', 'none');
-        $('img').attr('src', 'https://i.ytimg.com/vi/N2ACMD_SJtA/maxresdefault.jpg').css('height', '200px').css('width', '200px');
+        $('img').attr('src', 'https://dreamteck.io/images/blog/upld/mitko_contra_example.jpg').css('height', '600px').css('width', '100%').attr('class', 'animate__animated animate__fadeIn').css('--animate-duration', '2s');
+        $('#btn-1').css('display', 'none');
+        $('#btn-2').css('display', 'block');
         sound.play();
     }
 
