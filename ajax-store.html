@@ -15,6 +15,7 @@
             <th>Price</th>
             <th>Categories</th>
         </tr>
+
     </thead>
     <tbody id="insertProducts"></tbody>
 </table>
@@ -25,9 +26,22 @@
 (function() {
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
-    $.get('data/inventory.json')
+     $.get('data/inventory.json')
     .done(function(data) {
-        console.log(data)
+        //console.log(data)
+      data.forEach(function(item) {
+            console.log(item)
+            var html = "<tr>" +
+                "<th>" + item.title + "</th>"
+                + "<th>" + item.quantity + "</th>"
+                + "<th>" + item.price +"</th>"
+                + "<th>" + item.categories +"</th>"
+            +"</tr>"
+          $('#insertProducts').append(html)
+        })
+    })
+    .fail(function(status, error) {
+        console.log(status, error)
     })
 
     // TODO: Take the data from inventory.json and append it to the products table
