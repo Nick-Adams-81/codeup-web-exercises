@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="title" name="title">
+<br>
+<br>
+<label for="content">
+
+</label>
+<textarea id="content" name="content" rows="8" cols="25">
+
+</textarea>
+<br>
+<br>
+<input type="date" id="date" name="date">
+<input type="submit" value="submit" id="submit">
+<div id="posts"></div>
+</body>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+    'use strict';
+    $.get('data/blog.json')
+        .done(function (data) {
+            console.log(data)
+            data.forEach(function(item) {
+                var html = "<div>" +
+                    "<h3>" + item.title + "</h3>"
+                    + "<p>" + item.content + "</p>"
+                    + "<p>" + item.date + "</p>"
+                "</div>"
+                $('#posts').append(html)
+
+            })
+
+        })
+        .fail(function (error) {
+            console.log(error)
+        })
+
+
+
+</script>
+</html>
