@@ -75,13 +75,14 @@ var obj = {
 
 // .done - when our process is complete [done], do the following [callback function]
 //
-$.ajax("https://www.themealdb.com/api/json/v1/1/random.php").done(function(data, status, jqXhr){
-    alert("AJAX status : " + status);
-
-    console.log("Data returned from server:");
-    console.log(data);
-    // console.log(jqXhr);
-});
+// $.ajax("https://www.themealdb.com/api/json/v1/1/random.php")
+//     .done(function (data, status, jqXhr) {
+//         alert("AJAX status : " + status);
+//
+//         console.log("Data returned from server:");
+//         console.log(data);
+//         // console.log(jqXhr);
+//     });
 
 // Above, we've used two parameters in our .done callback function: status and data for different purposes
 
@@ -92,16 +93,19 @@ $.ajax("https://www.themealdb.com/api/json/v1/1/random.php").done(function(data,
 // .always = always do this stuff (callback function)
 
 // In action:
-// $.ajax("https://www.themealdb.com/api/json/v1/1/random.php").done(function(data, status, jqXhr) {
-//     alert("Everything went great! Check out the server's response in the console.");
-//     console.log(data);
-// }).fail(function(jqXhr, status, error) {
-//     alert("There was an error! Check the console for details");
-//     console.log("Response status: " + status);
-//     console.log("Error object: " + error);
-// }).always(function() {
-//     alert("This function always runs!");
-// });
+$.ajax("https://www.themealdb.com/api/json/v1/1/random.php")
+    .done(function (data, status, jqXhr) {
+        alert("Everything went great! Check out the server's response in the console.");
+        console.log(data);
+    })
+    .fail(function (jqXhr, status, error) {
+        alert("There was an error! Check the console for details");
+        console.log("Response status: " + status);
+        console.log("Error object: " + error);
+    })
+    .always(function () {
+        alert("This function always runs!");
+    });
 
 //Notice that .done and .fail will run one or the other dependent on the outcome, they are exclusive to each other
 
