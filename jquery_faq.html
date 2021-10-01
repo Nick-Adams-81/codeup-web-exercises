@@ -52,6 +52,7 @@
     <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, odit?</dd>
     <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, nam!</dd>
 </dl>
+<a href="#" id="toggle">Click to toggle text</a>
 <h3>Some park</h3>
 <ul>
     <li>stuff</li>
@@ -79,7 +80,7 @@
 <button>Change color</button>
 
 
-<a href="#" id="toggle">Click to toggle text</a>
+
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
         crossorigin="anonymous"></script>
 <script>
@@ -103,9 +104,7 @@
         })
 
         $('h3').click(function () {
-            $('ul').each(function () {
-                $(this).children().first().css('font-weight', 'bold')
-            })
+            $(this).next().css('font-weight', 'bold')
         })
 
         $('li').click(function () {
