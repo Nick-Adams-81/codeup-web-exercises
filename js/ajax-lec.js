@@ -23,21 +23,22 @@ console.log(obj.arr);
 // .ajax :: our first API request
 
 // // .ajax(url) - without any OPTIONS, defaults to a GET request:
-// $.ajax("putHookbinLinkHere").done(function(data){
-//     console.log(data);
-// })
+$.ajax("https://hookb.in/YVD3aQkeqgCQERGGERPO")
+    .done(function (data) {
+        console.log(data);
+    })
 
 // .ajax also has a wealth of options we can use in our efforts as programmers:
 // This example: Send out a POST request with some DATA
-// $.ajax("",
-//     {
-//         type: "POST",
-//         data: {
-//             cohort: "Quasar",
-//             type: "Web Development",
-//             yearStarted: 2021
-//         }
-//     })
+$.ajax("https://hookb.in/YVD3aQkeqgCQERGGERPO",
+    {
+        type: "POST",
+        data: {
+            cohort: "Quasar",
+            type: "Web Development",
+            yearStarted: 2021
+        }
+    })
 
 //TODO: Before we move on: Let's GET a random recipe together :)
 // Help me finish the following AJAX method to console.log the data that comes back!
