@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
+</script>
+<script>
+    $(document).ready(function() {
+        // json empty object
+        //var object = {}
+        // json empty array
+        //var array = []
+        // json props must be double quoted strings of key value pairs
+        var object1 = {
+            "name1": "value1",
+            "name2": "value2"
+        }
+
+        // all datatypes in this json object
+        var jsonObj = {
+            "stringProp": "stringValue",
+            "numberProp": 1,
+            "objectProp": {
+                "prop": "value"
+            },
+            "arrayProp" : ["item1", "item2"],
+            "arrayOfObjectsProp" : [
+                {
+                    "prop": "value"
+                },
+                {
+                    "prop": "value"
+                }
+            ],
+            "boolProp"  : true,
+            "nullProp"  : null
+        }
+
+    })
+</script>
+</body>
+</html>
