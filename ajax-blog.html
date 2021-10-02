@@ -6,18 +6,20 @@
 </head>
 <body>
 
-    <input type="text" id="title" name="title">
+<input type="text" id="title" name="title">
 <br>
 <br>
 <label for="content">
-
+    <textarea id="content" name="content" rows="8" cols="25"></textarea>
 </label>
-<textarea id="content" name="content" rows="8" cols="25"></textarea>
 <br>
 <br>
+<label for="categories">
+    <textarea id="categories" name="categories" rows="8" cols="25"></textarea>
+</label>
 <label for="date"></label><input type="date" id="date" name="date">
 <input type="submit" value="submit" id="submit">
-    <div id="test"></div>
+<div id="test"></div>
 <div id="posts"></div>
 </body>
 
@@ -27,11 +29,10 @@
     'use strict';
 
 
-
     $.get('data/blog.json')
         .done(function (data) {
             console.log(data)
-            data.forEach(function(item) {
+            data.forEach(function (item) {
                 var html = "<div>" +
                     "<h3>" + item.title + "</h3>"
                     + "<p>" + item.content + "</p>"
@@ -45,10 +46,10 @@
         })
 
 
-
-    $('#submit').click(function() {
+    $('#submit').click(function () {
         var myTitle = $('#title').val()
         var myContent = $("#content").val()
+        var myCategories = $('#categories')
         var myDate = $('#date').val()
         console.log(myTitle, myContent, myDate)
 
@@ -58,15 +59,14 @@
                 "content": myContent,
                 "date": myDate
             })
-        .done(function(data) {
-            console.log(data)
-        })
-        .fail(function(error) {
-            console.log(error)
-        })
+            .done(function (data) {
+                console.log(data)
+            })
+            .fail(function (error) {
+                console.log(error)
+            })
 
     })
-
 
 
 </script>
