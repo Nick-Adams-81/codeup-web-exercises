@@ -5,19 +5,19 @@
     <title>Title</title>
 </head>
 <body>
-<input type="text" id="title" name="title">
+
+    <input type="text" id="title" name="title">
 <br>
 <br>
 <label for="content">
 
 </label>
-<textarea id="content" name="content" rows="8" cols="25">
-
-</textarea>
+<textarea id="content" name="content" rows="8" cols="25"></textarea>
 <br>
 <br>
-<input type="date" id="date" name="date">
+<label for="date"></label><input type="date" id="date" name="date">
 <input type="submit" value="submit" id="submit">
+    <div id="test"></div>
 <div id="posts"></div>
 </body>
 
@@ -25,6 +25,9 @@
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
     'use strict';
+
+
+
     $.get('data/blog.json')
         .done(function (data) {
             console.log(data)
@@ -35,13 +38,22 @@
                     + "<p>" + item.date + "</p>"
                 "</div>"
                 $('#posts').append(html)
-
             })
-
         })
         .fail(function (error) {
             console.log(error)
         })
+
+
+
+    $('#submit').click(function() {
+        var myTitle = $('#title').val()
+        var myContent = $("#content").val()
+        var myDate = $('#date').val()
+        console.log(myTitle, myContent, myDate)
+
+
+    })
 
 
 
