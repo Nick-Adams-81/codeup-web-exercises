@@ -52,6 +52,18 @@
         var myDate = $('#date').val()
         console.log(myTitle, myContent, myDate)
 
+        $.post('data/blog.json',
+            {
+                "title": myTitle,
+                "content": myContent,
+                "date": myDate
+            })
+        .done(function(data) {
+            console.log(data)
+        })
+        .fail(function(error) {
+            console.log(error)
+        })
 
     })
 
