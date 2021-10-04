@@ -25,12 +25,13 @@
         }
         h3 {
             background-color: #1B0F1C;
-            opacity: 50%;
+            opacity: 60%;
             border-radius: 10px;
         }
         p {
             opacity: 80%;
         }
+
     </style>
 </head>
 <body>
@@ -64,12 +65,13 @@
     mapboxgl.accessToken = mapboxApiKey;
     var map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v9',
-        zoom: 10,
-        center: [-96.69107, 32.766540],
+        style: 'mapbox://styles/mapbox/streets-v11',
+        zoom: 9.7,
+        center: [-96.79107, 32.766540],
+        dragRotate: true
 
     });
-    var marker = new mapboxgl.Marker()
+    var marker = new mapboxgl.Marker({color: 'green'})
         .setLngLat([-96.82831, 32.779365])
         .setPopup(
             new mapboxgl.Popup({ offset: 25 }) // add popups
@@ -78,11 +80,16 @@
         )
         .addTo(map)
 
+    var marker = new mapboxgl.Marker({color: 'green'})
+            .setLngLat([-96.81802, 32.9539])
+            .setPopup(
+                new mapboxgl.Popup({ offset: 25 }) // add popups
+                    .setHTML('<h3>' + 'Twin Peaks' + '</h3>' + "<br>" + "<p>" + 'Good food, beer, and amazing views!' + "</p>")
 
+            )
 
+            .addTo(map)
 
-
-    /
     /***
      * geocode is a method to search for coordinates based on a physical address and return
      * @param {string} search is the address to search for the geocoded coordinates
@@ -96,7 +103,7 @@
      *  })
      *
      */
-    geocode('3011 Gulden Lane, Dallas, TX, 75212', mapboxApiKey)
+    geocode('5260 Belt Line Road, Dallas, TX, 75234', mapboxApiKey)
     .then(function(data) {
         console.log(data)
     })
