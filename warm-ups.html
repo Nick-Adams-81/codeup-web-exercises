@@ -7,13 +7,12 @@
 <body>
 <h1>WARM UPS IN THE CONSOLE</h1>
 <p>click on me and see what happens!</p>
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"
-        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
-    // wednesday warm up
+    // Wednesday warm up
     function logNum(number) {
-        for(var i = 1; i <= number; i++) {
-             if(i % 2 === 0) {
+        for (var i = 1; i <= number; i++) {
+            if (i % 2 === 0) {
                 console.log(i + ' is an even number');
             } else {
                 console.log(i + ' is an odd number');
@@ -21,9 +20,9 @@
         }
     }
 
-    //Monday warm up
-    $('p').click(function() {
-        alert($('p').html())
+    // Monday warm up
+    $('p').click(function () {
+        alert($(this).html())
     })
     logNum(10);
 </script>

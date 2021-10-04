@@ -6,11 +6,14 @@
 </head>
 <body>
 
-<input type="text" id="title" name="title">
+<input type="text" id="title" name="title" placeholder="title">
+<br>
+<br>
+<input type="text" id="categories" name="categories" placeholder="category">
 <br>
 <br>
 <label for="content">
-    <textarea id="content" name="content" rows="8" cols="25"></textarea>
+    <textarea id="content" name="content" rows="8" cols="25" placeholder="main content here"></textarea>
 </label>
 <br>
 <br>
@@ -25,16 +28,21 @@
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
     'use strict';
+$(document).ready(function() {
 
-
+    // getting dat from json file
     $.get('data/blog.json')
         .done(function (data) {
+            // using a for each loop to get each item from json file
             data.forEach(function (item) {
+                // setting up the html and injecting the data from json file
                 var html = "<div>" +
                     "<h3>" + item.title + "</h3>"
                     + "<p>" + item.content + "</p>"
+                    + "<p>" + item.categories + "</p>"
                     + "<p>" + item.date + "</p>"
-                "</div>"
+                    + "</div>"
+                // appending html variable to posts element
                 $('#posts').append(html)
             })
         })
@@ -46,13 +54,32 @@
     $('#submit').click(function () {
         var myTitle = $('#title').val()
         var myContent = $("#content").val()
+        var myCategories = $('#categories').val()
         var myDate = $('#date').val()
-        console.log(myTitle, myContent, myDate)
+        console.log(myTitle, myContent, myCategories, myDate)
+        if (myTitle === '') {
+            alert('Please enter a title')
+        } else if (myCategories === '') {
+            alert('Please enter a valid category')
+        } else if (myContent === '') {
+            alert('Please enter valid content')
+        }
 
-        $.post('data/blog.json',
+
+        var html = "<div>" +
+            "<h3>" + myTitle + "</h3>"
+            + "<p>" + myContent + "</p>"
+            + "<p>" + myCategories + "</p>"
+            + "<p>" + myDate + "</p>"
+            + "</div>"
+
+        // appending html variable to posts element
+        $('#posts').append(html)
+        $.post('https://hookb.in/XkY3NYmw31fDYMQQYDJW',
             {
                 "title": myTitle,
                 "content": myContent,
+                "categories": [myCategories],
                 "date": myDate
             })
             .done(function (data) {
@@ -62,9 +89,8 @@
                 console.log(error)
             })
 
-
     })
 
-
+})
 </script>
 </html>
