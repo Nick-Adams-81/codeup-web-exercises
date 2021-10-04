@@ -71,7 +71,8 @@
         dragRotate: true
 
     });
-    var marker = new mapboxgl.Marker({color: 'green'})
+    var marker = new mapboxgl.Marker({color: 'green', draggable: true})
+
         .setLngLat([-96.82831, 32.779365])
         .setPopup(
             new mapboxgl.Popup({ offset: 25 }) // add popups
@@ -80,14 +81,13 @@
         )
         .addTo(map)
 
-    var marker = new mapboxgl.Marker({color: 'green'})
+    var marker = new mapboxgl.Marker({color: 'green', draggable: true})
             .setLngLat([-96.81802, 32.9539])
             .setPopup(
                 new mapboxgl.Popup({ offset: 25 }) // add popups
                     .setHTML('<h3>' + 'Twin Peaks' + '</h3>' + "<br>" + "<p>" + 'Good food, beer, and amazing views!' + "</p>")
 
             )
-
             .addTo(map)
 
     /***
