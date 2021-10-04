@@ -71,17 +71,15 @@
         dragRotate: true
 
     });
-    var marker = new mapboxgl.Marker({color: 'green', draggable: true})
-
+    var betoMarker = new mapboxgl.Marker({color: 'skyblue', draggable: true})
         .setLngLat([-96.82831, 32.779365])
         .setPopup(
             new mapboxgl.Popup({ offset: 25 }) // add popups
                 .setHTML('<h3>' + 'Beto and Son' + '</h3>' + "<br>" + "<p>" + 'This place has the BEST margaritas DFW, and the food is all amazing!' + "</p>")
-
         )
         .addTo(map)
 
-    var marker = new mapboxgl.Marker({color: 'green', draggable: true})
+    var twinPeaksMarker = new mapboxgl.Marker({color: 'green', draggable: true})
             .setLngLat([-96.81802, 32.9539])
             .setPopup(
                 new mapboxgl.Popup({ offset: 25 }) // add popups
@@ -90,6 +88,24 @@
             )
             .addTo(map)
 
+    var hootersMarker = new mapboxgl.Marker({color: 'purple', draggable: true})
+        .setLngLat([-96.6301, 32.817522])
+        .setPopup(
+            new mapboxgl.Popup({ offset: 25 }) // add popups
+                .setHTML('<h3>' + 'Hooters' + '</h3>' + "<br>" + "<p>" + 'Hooters makes you happy' + "</p>")
+
+        )
+        .addTo(map)
+
+    var codeupDallasMarker = new mapboxgl.Marker({color: 'greenyellow', draggable: true})
+    .setLngLat([-96.80506, 32.7786])
+    .addTo(map)
+
+    var popup = new mapboxgl.Popup()
+    .setLngLat([-98.4895, 29.4267])
+    .setHTML("<h6><em>Codeup rocks!</em></h6>")
+    .addTo(map)
+    codeupDallasMarker.setPopup(popup)
     /***
      * geocode is a method to search for coordinates based on a physical address and return
      * @param {string} search is the address to search for the geocoded coordinates
@@ -103,7 +119,7 @@
      *  })
      *
      */
-    geocode('5260 Belt Line Road, Dallas, TX, 75234', mapboxApiKey)
+    geocode('3902 Towne Crossing Blvd, Masquite, TX, 75150', mapboxApiKey)
     .then(function(data) {
         console.log(data)
     })
