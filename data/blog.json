@@ -1,4 +1,3 @@
-
 [
   {
     "title": "My First Blog Post",
@@ -18,5 +17,13 @@
       "sugar"
     ],
     "date": "February 14, 2015"
+  },
+  {
+    "title": "The Third post",
+    "content": "just some random test content, nothing too serious but just enough to fill some space up",
+    "categories": [
+      "random category"
+    ],
+    "date": "October 4th, 2021"
   }
 ]

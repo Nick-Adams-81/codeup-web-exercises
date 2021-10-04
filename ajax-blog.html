@@ -36,8 +36,8 @@ $(document).ready(function() {
             // using a for each loop to get each item from json file
             data.forEach(function (item) {
                 // setting up the html and injecting the data from json file
-                var html = "<div>" +
-                    "<h3>" + item.title + "</h3>"
+                var html = "<div>"
+                    + "<h3>" + item.title + "</h3>"
                     + "<p>" + item.content + "</p>"
                     + "<p>" + item.categories + "</p>"
                     + "<p>" + item.date + "</p>"
@@ -65,17 +65,16 @@ $(document).ready(function() {
             alert('Please enter valid content')
         }
 
-
         var html = "<div>" +
             "<h3>" + myTitle + "</h3>"
             + "<p>" + myContent + "</p>"
             + "<p>" + myCategories + "</p>"
             + "<p>" + myDate + "</p>"
             + "</div>"
-
         // appending html variable to posts element
         $('#posts').append(html)
-        $.post('https://hookb.in/XkY3NYmw31fDYMQQYDJW',
+
+        $.post('data/blog.json',
             {
                 "title": myTitle,
                 "content": myContent,
@@ -88,7 +87,6 @@ $(document).ready(function() {
             .fail(function (error) {
                 console.log(error)
             })
-
     })
 
 })
