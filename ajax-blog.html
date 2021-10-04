@@ -46,11 +46,10 @@
     $('#submit').click(function () {
         var myTitle = $('#title').val()
         var myContent = $("#content").val()
-        var myCategories = $('#categories')
         var myDate = $('#date').val()
         console.log(myTitle, myContent, myDate)
 
-        $.post('https://hookb.in/3OlVdkBrVZH7yakkyaqb',
+        $.post('data/blog.json',
             {
                 "title": myTitle,
                 "content": myContent,
