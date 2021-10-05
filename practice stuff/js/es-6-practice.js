@@ -6,10 +6,10 @@
 // Exponent operator //
 
 //es-5
-console.log(Math.pow(2, 8));
+//console.log(Math.pow(2, 8));
 
 //es-6
-console.log(2 ** 8);
+//console.log(2 ** 8);
 
 // let and const //
 
@@ -26,20 +26,20 @@ const newName = 'some name';
 // template strings //
 
 //es-5 string concatenation
-var num  = 5;
-console.log('you are ' + num + ' years old');
+var num = 5;
+//console.log('you are ' + num + ' years old');
 
 //es-6 template literal w/ backticks
 const age = 39;
-console.log(`I am ${age} years old`);
+//console.log(`I am ${age} years old`);
 
 // for of loop //
 
 const list = [1, 2, 3, 4]
-for(let element in list) {
+for (let element in list) {
     // will log the index of element in this list array
     // can also use const instead of let
-    console.log(element);
+    //console.log(element);
 }
 
 // arrow functions //
@@ -48,12 +48,13 @@ for(let element in list) {
 function sayHello(name) {
     return 'Hello ' + name + '!'
 }
-console.log(sayHello('nick'));
+
+//console.log(sayHello('nick'));
 
 // es-6 arrow function
 // parenthesis can be omitted w/ single argument
 const hello = name => `Hello ${name}!`
-console.log(hello('Nick'));
+//console.log(hello('Nick'));
 
 // object property assignment //
 
@@ -63,7 +64,7 @@ var person = {
     name: name3,
     age: 5
 }
-console.log(person);
+//console.log(person);
 
 //es-6
 const name4 = 'codeup';
@@ -71,26 +72,26 @@ const people = {
     name4,
     age: 9
 }
-console.log(people);
+//console.log(people);
 
 // object destructuring //
 
 //es-5
-var persons = {name:'nick', age:39};
+var persons = {name: 'nick', age: 39};
 var name = persons.name;
 var age1 = persons.age;
-console.log(name, age1);
+//console.log(name, age1);
 
 //es-6
-const people1 = {name5:'codeup', age2: 4};
+const people1 = {name5: 'codeup', age2: 4};
 const {name5, age2} = people1;
-console.log(name5, age2);
+//console.log(name5, age2);
 
 // array destructuring
 
 const arr = [1, 2, 3, 4, 5];
-const[x, y] = arr;
-console.log(x, y);
+const [x, y] = arr;
+//console.log(x, y);
 
 
 // array methods map, filter, and reduce //
@@ -100,29 +101,29 @@ let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 // map
 const increment = numbers.map(num => num + 1);
-console.log(increment);
+//console.log(increment);
 
 // filter
 const filteredNum = numbers.filter(num => num % 2 === 0);
-console.log(filteredNum);
+//console.log(filteredNum);
 
 // reduce
 const sum = numbers.reduce((total, currentNums) => {
     return total + currentNums;
 }, 0);
-console.log(sum);
+//console.log(sum);
 
 // another reduce example
 const salesPeeps = [
-    {name: 'Nick', sold:100},
-    {name: 'Doug', sold:50},
-    {name: 'Eric', sold:225}
+    {name: 'Nick', sold: 100},
+    {name: 'Doug', sold: 50},
+    {name: 'Eric', sold: 225}
 ];
 
 const totalSold = salesPeeps.reduce((total, person) => {
     return total + person.sold;
 }, 0);
-console.log(totalSold);
+//console.log(totalSold);
 
 // another reduce example
 const countWords = (input) => {
@@ -136,14 +137,14 @@ const countWords = (input) => {
         return wordCount
     }, {});
 }
-console.log(countWords('hello hello how are you today hello'));
+//console.log(countWords('hello hello how are you today hello'));
 
 //promises using the fetch API
 fetch('https://api.github.com/users')
-    //the response promise(.then)
-    .then(res => console.log(res))
-    //the second promise for error catching(.catch)
-    .catch(err => console.error(err));
+//the response promise(.then)
+//.then(res => console.log(res))
+//the second promise for error catching(.catch)
+//.catch(err => console.error(err));
 
 
 // object practice
@@ -177,14 +178,34 @@ newPeople.unshift(personA, personB, personC);
 
 
 const isPalindrome = (input) => {
-    if(typeof input !== 'string') return false;
+    if (typeof input !== 'string') return false;
     let forward = input.toLowerCase();
     let reverse = input.split('').reverse().join('').toLowerCase();
     return forward === reverse
 
 }
 
-console.log(isPalindrome(8));
+//console.log(isPalindrome(8));
 
+// **
+// * Count total pets
+// * Write a function named totalPets that accepts an array of objects where each object represents a person, and has a 'pets' property for their owned pets. The function should return the sum of every object's pets property.
+// *
+// * Examples
+// *
+var totalPets = ([
+    {name: 'Fernando Mendoza', pets: 1},
+    {name: 'Douglas Hirsh', pets: 8},
+    {name: 'Kenneth Howell', pets: 2}
+])
 
+function petsTotal(arr) {
+    var array = []
+    arr.forEach(function (people) {
+        array.push(people.pets)
+        var sum = eval(array.join('+'))
+        console.log(sum)
+    })
+}
 
+petsTotal(totalPets);
