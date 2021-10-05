@@ -199,13 +199,14 @@ var totalPets = ([
     {name: 'Kenneth Howell', pets: 2}
 ])
 
-function petsTotal(arr) {
-    var array = []
-    arr.forEach(function (people) {
-        array.push(people.pets)
-        var sum = eval(array.join('+'))
-        console.log(sum)
-    })
-}
 
-petsTotal(totalPets);
+var petsNum = totalPets.reduce(function(acc, val) {
+    return acc + val.pets
+}, 0)
+
+
+console.log(petsNum)
+function petsTotal(arr) {
+    return arr.reduce((acc, value) => acc + value.pets, 0)
+}
+console.log(petsTotal(totalPets));
