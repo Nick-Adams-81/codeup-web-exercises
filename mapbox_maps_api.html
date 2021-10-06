@@ -87,7 +87,6 @@ $('g').click(function() {
     map.setCenter([-96.82831, 32.779365])
 })
 
-
     var twinPeaksMarker = new mapboxgl.Marker({color: 'green', draggable: true})
             .setLngLat([-96.81802, 32.9539])
             .setPopup(
@@ -95,15 +94,13 @@ $('g').click(function() {
                     .setHTML('<h3>' + 'Twin Peaks' + '</h3>' + "<br>" + "<p>" + 'Good food, beer, and amazing views!' + "</p>")
 
             )
-
             .addTo(map)
 
     var hootersMarker = new mapboxgl.Marker({color: 'purple', draggable: true})
         .setLngLat([-96.6301, 32.817522])
         .setPopup(
-            new mapboxgl.Popup({ offset: 25 }) // add popups
+            new mapboxgl.Popup({  closeOnMove: true }) // add popups
                 .setHTML('<h3>' + 'Hooters' + '</h3>' + "<br>" + "<p>" + 'Hooters makes you happy' + "</p>")
-
         )
         .addTo(map)
 
@@ -121,7 +118,7 @@ $('g').click(function() {
      *
      */
 
-    var home = new mapboxgl.Marker({color: 'darkgreen'})
+    var home = new mapboxgl.Marker({color: 'darkred'})
     .setLngLat([-96.691114, 32.766597])
         .setPopup(
             new mapboxgl.Popup()
