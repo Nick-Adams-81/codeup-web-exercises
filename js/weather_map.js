@@ -3,14 +3,12 @@
 $(document).ready(function() {
 
     // get route from weathermap api
-
-
         $.get("http://api.openweathermap.org/data/2.5/weather", {
             APPID: OPEN_WEATHER_APIID,
             q: "Dallas, US",
             units: "imperial"
         }).done(function (data) {
-            console.log(data.main)
+            console.log(data)
         })
 
 
@@ -58,8 +56,13 @@ $(document).ready(function() {
             q: input,
             units: "imperial"
         }).done(function (data) {
-            console.log(data.main)
-            $('#weather').html(Math.round(data.main.temp))
+            console.log(data)
+            var temp = data.main.temp
+            var high = data.main.temp_max
+            var low = data.main.temp_min
+            $('#weather').html('current temp: ' + Math.round(temp) + '°')
+            $('#high').html('High: ' + Math.round(high) + '°')
+            $('#low').html('Low: ' + Math.round(low) + '°')
         })
     })
 
