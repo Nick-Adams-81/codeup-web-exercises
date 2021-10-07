@@ -1,7 +1,7 @@
 'use strict';
 
 $(document).ready(function() {
-
+    //api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}
     // get route from weathermap api
         $.get("http://api.openweathermap.org/data/2.5/weather", {
             APPID: OPEN_WEATHER_APIID,
@@ -9,6 +9,12 @@ $(document).ready(function() {
             units: "imperial"
         }).done(function (data) {
             console.log(data)
+            var temp = data.main.temp
+            var high = data.main.temp_max
+            var low = data.main.temp_min
+            $('#weather').html('current temp: ' + Math.round(temp) + '°')
+            $('#high').html('High: ' + Math.round(high) + '°')
+            $('#low').html('Low: ' + Math.round(low) + '°')
         })
 
 

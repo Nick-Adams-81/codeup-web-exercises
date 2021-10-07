@@ -22,3 +22,9 @@ h3 {
 p {
   opacity: 80%;
 }
+
+.jumbotron {
+  background-color: #1969B2;
+  margin-bottom: -45px;
+  height: 350px;
+}
