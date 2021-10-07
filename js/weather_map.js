@@ -2,10 +2,10 @@
 
 $(document).ready(function () {
 
-     // function for converting the date to standard notation
-      function parseDate(timestamp) {
-          return new Date(timestamp * 1000).toLocaleDateString();
-      }
+    // function for converting the date to standard notation
+    function parseDate(timestamp) {
+        return new Date(timestamp * 1000).toLocaleDateString();
+    }
 
 
     //api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}
@@ -30,7 +30,7 @@ $(document).ready(function () {
             // var date = data.daily[0].dt
             // console.log(date)
 
-           // function for converting the date to standard notation
+            // function for converting the date to standard notation
             function parseDate(timestamp) {
                 return new Date(timestamp * 1000).toLocaleDateString();
             }
@@ -40,7 +40,7 @@ $(document).ready(function () {
 
                 var date = parseDate(data.daily[i].dt)
                 //console.log(date)
-         
+
                 var temp = data.current.temp
                 var high = data.daily[i].temp.max
                 var low = data.daily[i].temp.min
@@ -101,14 +101,31 @@ $(document).ready(function () {
                     APPID: OPEN_WEATHER_APIID,
                     units: "imperial"
                 }).done(function (newData) {
-                    console.log(newData)
+                    //console.log(newData.current.temp)
                     // creating a new variable storing the daily weather data
                     var dailyWeather = newData.daily
                     //console.log(dailyWeather)
 
 
-                    for(var i = dailyWeather.length - 1; i >=0; i--) {
-                        console.log(dailyWeather[i])
+                    for (var i = dailyWeather.length - 1; i >= 0; i--) {
+                        console.log(dailyWeather[i].temp.min)
+                        var date = parseDate(dailyWeather[i].dt)
+                        var temp = newData.current.temp
+                        var high = dailyWeather[i].temp.max
+                        var low = dailyWeather[i].temp.min
+
+                        var html = "<div class='card' style='width: 13rem'>" +
+                            "<div class='card-body'>" +
+                            "<div>" + date + "</div>" +
+                            "<h5>" + 'current temp: ' + Math.round(temp) + '°' + "</h5>" +
+                            "<div>" + "high: " + Math.round(high) + '°' + "</div>" +
+                            "<div>" + 'low: ' + Math.round(low) + '°' + "</div>"
+                            + "</div>" +
+                            +"</div>"
+
+                        $('.content').prepend(html)
+
+                        //console.log(parseDate(date));
                     }
 
                     // looping through our new data to display future forecast
