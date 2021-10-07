@@ -22,22 +22,11 @@ $(document).ready(function () {
         arr.push(data)
         //console.log(arr)
 
-        var temp = data.current.temp
-
         arr.forEach(function (data, index) {
-            console.log(data.daily[0].dt)
-
-            // var date = data.daily[0].dt
-            // console.log(date)
-
-            // function for converting the date to standard notation
-            function parseDate(timestamp) {
-                return new Date(timestamp * 1000).toLocaleDateString();
-            }
+            //console.log(data.daily[0].dt)
 
             for (var i = data.daily.length - 1; i >= 0; i--) {
                 //console.log(data.daily[i].temp)
-
                 var date = parseDate(data.daily[i].dt)
                 //console.log(date)
 
@@ -47,12 +36,11 @@ $(document).ready(function () {
                 var html = "<div class='card' style='width: 13rem'>" +
                     "<div class='card-body'>" +
                     "<div>" + date + "</div>" +
-                    "<div>" + 'current temp: ' + Math.round(temp) + '°' + "</div>" +
+                    "<h5>" + 'current temp: ' + Math.round(temp) + '°' + "</h5>" +
                     "<div>" + "high: " + Math.round(high) + '°' + "</div>" +
-                    "<div>" + 'low: ' + Math.round(low) + '°' + "</div>"
-                    + "</div>" +
+                    "<div>" + 'low: ' + Math.round(low) + '°' + "</div>" +
+                    "</div>" 
                     +"</div>"
-
                 $('.content').prepend(html)
 
             }
@@ -106,9 +94,8 @@ $(document).ready(function () {
                     var dailyWeather = newData.daily
                     //console.log(dailyWeather)
 
-
                     for (var i = dailyWeather.length - 1; i >= 0; i--) {
-                        console.log(dailyWeather[i].temp.min)
+                        console.log(dailyWeather[i].weather[0])
                         var date = parseDate(dailyWeather[i].dt)
                         var temp = newData.current.temp
                         var high = dailyWeather[i].temp.max
@@ -120,8 +107,8 @@ $(document).ready(function () {
                             "<h5>" + 'current temp: ' + Math.round(temp) + '°' + "</h5>" +
                             "<div>" + "high: " + Math.round(high) + '°' + "</div>" +
                             "<div>" + 'low: ' + Math.round(low) + '°' + "</div>"
-                            + "</div>" +
-                            +"</div>"
+                            + "</div>" 
+                            + "</div>"
 
                         $('.content').prepend(html)
 
