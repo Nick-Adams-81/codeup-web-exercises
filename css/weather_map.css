@@ -26,13 +26,23 @@ p {
 .jumbotron {
   background-color: #1969B2;
   margin-bottom: -45px;
-  height: 380px;
+  height: 340px;
 }
 
 .card {
-  margin-top: 5px;
+ display: inline-block;
+  margin: 5px;
+
 }
 
 #submit {
-  margin-top: 5px;
+  margin-top: 8px;
 }
+
+h1 {
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+

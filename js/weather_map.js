@@ -2,14 +2,6 @@
 
 $(document).ready(function () {
     //api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}
-    // get route from weathermap api
-    $.get("http://api.openweathermap.org/data/2.5/weather", {
-        APPID: OPEN_WEATHER_APIID,
-        q: "Dallas, US",
-        units: "imperial"
-    }).done(function (data) {
-       //console.log(data)
-    })
 
     $.get('https://api.openweathermap.org/data/2.5/onecall', {
         lat: 32.7763,
@@ -51,59 +43,58 @@ $(document).ready(function () {
             });
     }
 
-    // click event using user input for mapbox api
-    $('#submit').click(function (e) {
-        e.preventDefault()
-        var userData = $('#input').val();
-
-        geocode(userData, mapboxApiKey)
-            .then(function (data) {
-                //console.log(data)
-                map.flyTo({center: data})
-            })
-
-    })
 
     // click event using user data for weathermap api
     $('#submit').click(function (e) {
         e.preventDefault()
         var input = $('#input').val()
-         geocode(input, mapboxApiKey)
+        geocode(input, mapboxApiKey)
             .then(function (data) {
-                //console.log(data)
+                // console.log(data)
+                map.flyTo({center: data})
+                // get route using geocode for lat and lon coordinates
                 $.get('https://api.openweathermap.org/data/2.5/onecall', {
                     lat: data[1],
                     lon: data[0],
                     APPID: OPEN_WEATHER_APIID,
                     units: "imperial"
                 }).done(function (newData) {
+                    // creating a new variable storing the daily weather data
                     var dailyWeather = newData.daily
-                    //console.log(dailyWeather)
-                    dailyWeather.forEach(function(data) {
-                        console.log(data)
+                    console.log(dailyWeather)
+                    // looping through our new data to display future forecast
+                    dailyWeather.forEach(function (data) {
+                        //console.log(data.temp)
+                        // calling the current object from newData for current conditions
                         var temp = newData.current.temp
                         var high = data.temp.max
                         var low = data.temp.min
                         $('#weather').html('current temp: ' + Math.round(temp) + '°')
                         $('#high').html('High: ' + Math.round(high) + '°')
                         $('#low').html('Low: ' + Math.round(low) + '°')
+
+                        var html = "<div class='card' style='width: 13rem'>" +
+                            "<div class='card-body'>" +
+                            "<h5>" + 'current temp: ' + Math.round(temp) + '°' +"</h5>" +
+                            "<div>" + "high: " + Math.round(high) + '°' + "</div>" +
+                            "<div>" + 'low: ' + Math.round(low) + '°' + "</div>"
+                            + "</div>" +
+                            +"</div>"
+
+                        $('.content').append(html)
+                        // < div
+                        // className = "card"
+                        // style = "width: 13rem;" >
+                        //     < !--<img src="..." class="card-img-top" alt="...">-->
+                        //         <div className="card-body">
+                        //             <h5 className="card-title" id="weather"></h5>
+                        //             <div id="high"></div>
+                        //             <div id="low"></div>
+                        //         </div>
+                        //     </div>
                     })
                 })
-        })
-
-        // $.get("http://api.openweathermap.org/data/2.5/weather", {
-        //     APPID: OPEN_WEATHER_APIID,
-        //     q: input,
-        //     units: "imperial"
-        // }).done(function (data) {
-        //     //console.log(data)
-        //     var temp = data.main.temp
-        //     var high = data.main.temp_max
-        //     var low = data.main.temp_min
-        //     $('#weather').html('current temp: ' + Math.round(temp) + '°')
-        //     $('#high').html('High: ' + Math.round(high) + '°')
-        //     $('#low').html('Low: ' + Math.round(low) + '°')
-        // })
+            })
 
     })
 
