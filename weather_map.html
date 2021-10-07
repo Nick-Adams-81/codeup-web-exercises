@@ -2,36 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Weather map</title>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet'/>
     <link rel="stylesheet" href="css/weather_map.css">
 </head>
 <body>
+<input type="text" id="input">
+<button id="submit">search</button>
+<div id="weather"></div>
+<br>
+<br>
 <div id='map'></div>
+
+
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
         crossorigin="anonymous"></script>
 
 <script src="keys.js"></script>
 <script src="js/weather_map.js"></script>
-<script>
-    $.get("http://api.openweathermap.org/data/2.5/weather", {
-        APPID: OPEN_WEATHER_APIID,
-        q: "San Antonio, US",
-        units: "imperial"
-    }).done(function (data) {
-        console.log(data)
-    })
-
-    mapboxgl.accessToken = mapboxApiKey;
-    var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11',
-        zoom: 9.7,
-        center: [-96.79107, 32.766540],
-        dragRotate: true
-
-    });
-</script>
 </body>
 </html>
