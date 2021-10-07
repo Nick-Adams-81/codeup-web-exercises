@@ -1,21 +1,64 @@
 'use strict';
 
 $(document).ready(function () {
-    //api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}
 
+     // function for converting the date to standard notation
+      function parseDate(timestamp) {
+          return new Date(timestamp * 1000).toLocaleDateString();
+      }
+
+
+    //api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}
     $.get('https://api.openweathermap.org/data/2.5/onecall', {
         lat: 32.7763,
         lon: -96.7969,
         APPID: OPEN_WEATHER_APIID,
         units: "imperial"
     }).done(function (data) {
-        //console.log(data.daily)
+        //console.log(data)
+        // var dailyTemp = data.daily
+        //console.log(dailyTemp)
+        var arr = []
+        arr.push(data)
+        //console.log(arr)
+
         var temp = data.current.temp
-        var high = data.daily[0].temp.max
-        var low = data.daily[0].temp.min
-        $('#weather').html('current temp: ' + Math.round(temp) + '°')
-        $('#high').html('High: ' + Math.round(high) + '°')
-        $('#low').html('Low: ' + Math.round(low) + '°')
+
+        arr.forEach(function (data, index) {
+            console.log(data.daily[0].dt)
+
+            // var date = data.daily[0].dt
+            // console.log(date)
+
+           // function for converting the date to standard notation
+            function parseDate(timestamp) {
+                return new Date(timestamp * 1000).toLocaleDateString();
+            }
+
+            for (var i = data.daily.length - 1; i >= 0; i--) {
+                //console.log(data.daily[i].temp)
+
+                var date = parseDate(data.daily[i].dt)
+                //console.log(date)
+         
+                var temp = data.current.temp
+                var high = data.daily[i].temp.max
+                var low = data.daily[i].temp.min
+                var html = "<div class='card' style='width: 13rem'>" +
+                    "<div class='card-body'>" +
+                    "<div>" + date + "</div>" +
+                    "<div>" + 'current temp: ' + Math.round(temp) + '°' + "</div>" +
+                    "<div>" + "high: " + Math.round(high) + '°' + "</div>" +
+                    "<div>" + 'low: ' + Math.round(low) + '°' + "</div>"
+                    + "</div>" +
+                    +"</div>"
+
+                $('.content').prepend(html)
+
+            }
+
+        })
+
     })
 
 
@@ -27,7 +70,6 @@ $(document).ready(function () {
         zoom: 9.7,
         center: [-96.79107, 32.766540],
         dragRotate: true
-
     });
 
     // geocode function to get coordinates from user input
@@ -59,44 +101,41 @@ $(document).ready(function () {
                     APPID: OPEN_WEATHER_APIID,
                     units: "imperial"
                 }).done(function (newData) {
+                    console.log(newData)
                     // creating a new variable storing the daily weather data
                     var dailyWeather = newData.daily
-                    console.log(dailyWeather)
+                    //console.log(dailyWeather)
+
+
+                    for(var i = dailyWeather.length - 1; i >=0; i--) {
+                        console.log(dailyWeather[i])
+                    }
+
                     // looping through our new data to display future forecast
-                    dailyWeather.forEach(function (data) {
-                        //console.log(data.temp)
-                        // calling the current object from newData for current conditions
-                        var temp = newData.current.temp
-                        var high = data.temp.max
-                        var low = data.temp.min
-                        $('#weather').html('current temp: ' + Math.round(temp) + '°')
-                        $('#high').html('High: ' + Math.round(high) + '°')
-                        $('#low').html('Low: ' + Math.round(low) + '°')
-
-                        var html = "<div class='card' style='width: 13rem'>" +
-                            "<div class='card-body'>" +
-                            "<h5>" + 'current temp: ' + Math.round(temp) + '°' +"</h5>" +
-                            "<div>" + "high: " + Math.round(high) + '°' + "</div>" +
-                            "<div>" + 'low: ' + Math.round(low) + '°' + "</div>"
-                            + "</div>" +
-                            +"</div>"
-
-                        $('.content').append(html)
-                        // < div
-                        // className = "card"
-                        // style = "width: 13rem;" >
-                        //     < !--<img src="..." class="card-img-top" alt="...">-->
-                        //         <div className="card-body">
-                        //             <h5 className="card-title" id="weather"></h5>
-                        //             <div id="high"></div>
-                        //             <div id="low"></div>
-                        //         </div>
-                        //     </div>
-                    })
+                    // dailyWeather.forEach(function (data) {
+                    //     console.log(data)
+                    //     // calling the current object from newData for current conditions
+                    //     var date = parseDate(data.dt)
+                    //     var temp = newData.current.temp
+                    //     var high = data.temp.max
+                    //     var low = data.temp.min
+                    //
+                    //     var html = "<div class='card' style='width: 13rem'>" +
+                    //         "<div class='card-body'>" +
+                    //         "<div>" + date + "</div>" +
+                    //         "<h5>" + 'current temp: ' + Math.round(temp) + '°' + "</h5>" +
+                    //         "<div>" + "high: " + Math.round(high) + '°' + "</div>" +
+                    //         "<div>" + 'low: ' + Math.round(low) + '°' + "</div>"
+                    //         + "</div>" +
+                    //         +"</div>"
+                    //
+                    //     $('.content').prepend(html)
+                    //
+                    //
+                    // })
                 })
             })
 
     })
-
 
 })
