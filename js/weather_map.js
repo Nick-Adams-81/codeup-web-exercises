@@ -34,7 +34,7 @@ $(document).ready(function () {
             });
     }
 
-
+    var click = new Audio('audio/click.wav')
     //api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}
     $.get('https://api.openweathermap.org/data/2.5/onecall', {
         lat: 32.7763,
@@ -42,22 +42,39 @@ $(document).ready(function () {
         APPID: OPEN_WEATHER_APIID,
         units: "imperial"
     }).done(function (data) {
-        console.log(data)
-        // var dailyTemp = data.daily
-        //console.log(dailyTemp)
-        var arr = []
-        arr.push(data)
-        //console.log(arr)
+        //console.log(data)
 
-        arr.forEach(function (data, index) {
-            //console.log(data.daily[0].dt)
-            for (var i = data.daily.length - 1; i >= 0; i--) {
-                //console.log(data.daily[i].temp)
-                var date = parseDate(data.daily[i].dt)
-                var temp = data.current.temp
-                var high = data.daily[i].temp.max
-                var low = data.daily[i].temp.min
-                renderHtml(date, temp, high, low)
+        // setting up an empty array to push the data into
+        var arr = []
+        // pushing data to the empty array
+        arr.push(data)
+
+        // looping through our array of data
+        arr.forEach(function (data) {
+
+            // pulling out the daily data from our array
+            var dailyData = data.daily
+
+            // looping through the daily data array
+            for (var i = dailyData.length - 1; i >= 0; i--) {
+
+                // pulling out the weather array from the daily data array
+                var weatherArr = data.daily[i].weather
+
+                // looping through the weather data array to gain access to the weather icons
+                for(var j = 0; j < weatherArr.length; j++) {
+                    //console.log(weatherArr[j])
+                    // setting up our variables to add to render html function
+                    var weatherIcon = weatherArr[j].icon
+                    //console.log(weatherIcon)
+                    var date = parseDate(data.daily[i].dt)
+                    var temp = data.current.temp
+                    var high = data.daily[i].temp.max
+                    var low = data.daily[i].temp.min
+                    renderHtml(date, temp, high, low)
+
+                }
+
             }
 
         })
@@ -79,11 +96,12 @@ $(document).ready(function () {
     // click event using user data for weathermap api
     $('#submit').click(function (e) {
         e.preventDefault()
+        click.play()
         var input = $('#input').val()
         geocode(input, mapboxApiKey)
             .then(function (data) {
-                // console.log(data)
                 map.flyTo({center: data})
+
                 // get route using geocode for lat and lon coordinates
                 $.get('https://api.openweathermap.org/data/2.5/onecall', {
                     lat: data[1],
@@ -91,26 +109,22 @@ $(document).ready(function () {
                     APPID: OPEN_WEATHER_APIID,
                     units: "imperial"
                 }).done(function (newData) {
-                    //console.log(newData.current.temp)
+
                     // creating a new variable storing the daily weather data
                     var dailyWeather = newData.daily
-                    //console.log(dailyWeather)
 
                     // looping through daily weather to get data from api, had to loop backwards due to how the api sends its data
                     for (var i = dailyWeather.length - 1; i >= 0; i--) {
-                        console.log(dailyWeather[i])
+                        //console.log(dailyWeather[i])
                         var date = parseDate(dailyWeather[i].dt)
                         var temp = newData.current.temp
                         var high = dailyWeather[i].temp.max
                         var low = dailyWeather[i].temp.min
                         renderHtml(date, temp, high, low)
-
                     }
-
                 })
             })
 
     })
-
 
 })
