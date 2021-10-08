@@ -7,7 +7,8 @@
 <body>
 <h1>WARM UPS IN THE CONSOLE</h1>
 <p>click on me and see what happens!</p>
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
     // Wednesday warm up
     function logNum(number) {
@@ -25,6 +26,15 @@
         alert($(this).html())
     })
     logNum(10);
+
+    // friday warm up
+    var dt = 1618317040;
+
+    function convertDateTime(num) {
+        return new Date(num * 1000).toLocaleDateString();
+    }
+
+    console.log(convertDateTime(dt));
 </script>
 </body>
 </html>
