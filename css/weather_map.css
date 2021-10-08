@@ -28,19 +28,19 @@ p {
 .jumbotron {
   background-color: #1969B2;
   margin-bottom: -45px;
-  height: 425px;
+  height: 458px;
 }
 
 .card {
   display: inline-block;
-  margin-top: 25px;
+  margin-top: 12px;
   margin-right: 7px;
   box-shadow: 4px 4px 0 0 rgba(0,0,0,0.5);
 
 }
 
 #submit {
-  margin-top: 15px;
+  margin-top: 10px;
   margin-bottom: 3px;
   margin-left: 45%;
   box-shadow: 4px 4px 0 0 rgba(0,0,0,0.5);
@@ -49,6 +49,7 @@ p {
 
 #input {
   box-shadow:  4px 4px 0 0  rgba(0,0,0,0.5);
+  margin-top: -15px;
 }
 
 h1 {

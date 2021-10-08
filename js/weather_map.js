@@ -8,16 +8,16 @@ $(document).ready(function () {
     }
 
     // function rendering the data in html
-    function renderHtml(date, current, high, low) {
+    function renderHtml(date, current, image, high, low) {
         var html = "<div class='card' style='width: 10rem'>" +
             "<div class='card-body'>" +
             "<div>" + date + "</div>" +
-            "<h5>" + 'current: ' + Math.round(current) + '°' + "</h5>" +
-            "<div>" + "high: " + Math.round(high) + '°' + "</div>" +
-            "<div>" + 'low: ' + Math.round(low) + '°' + "</div>"
+            "<h5>" + 'current: ' + Math.round(current) + '°' + '</h5>' +
+            '<img src="' + image + '" class="card-img-top" alt="Epic Fail!!!" height="80px" width="50px">' +
+            "<div>" + 'high: ' + Math.round(high) + '°' + '</div>' +
+            "<div>" + 'low: ' + Math.round(low) + '°' + '</div>'
             + "</div>"
             + "</div>"
-
         $('.content').prepend(html)
     }
 
@@ -34,7 +34,9 @@ $(document).ready(function () {
             });
     }
 
+    // click sound effect used for button click
     var click = new Audio('audio/click.wav')
+
     //api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}
     $.get('https://api.openweathermap.org/data/2.5/onecall', {
         lat: 32.7763,
@@ -42,7 +44,6 @@ $(document).ready(function () {
         APPID: OPEN_WEATHER_APIID,
         units: "imperial"
     }).done(function (data) {
-        //console.log(data)
 
         // setting up an empty array to push the data into
         var arr = []
@@ -63,22 +64,18 @@ $(document).ready(function () {
 
                 // looping through the weather data array to gain access to the weather icons
                 for(var j = 0; j < weatherArr.length; j++) {
-                    //console.log(weatherArr[j])
+
                     // setting up our variables to add to render html function
-                    var weatherIcon = weatherArr[j].icon
-                    //console.log(weatherIcon)
+                    var weatherIcon =  weatherArr[j].icon
                     var date = parseDate(data.daily[i].dt)
                     var temp = data.current.temp
+                    var image = "http://openweathermap.org/img/w/" + weatherIcon + ".png"
                     var high = data.daily[i].temp.max
                     var low = data.daily[i].temp.min
-                    renderHtml(date, temp, high, low)
-
+                    renderHtml(date, temp, image, high, low)
                 }
-
             }
-
         })
-
     })
 
 
@@ -115,12 +112,23 @@ $(document).ready(function () {
 
                     // looping through daily weather to get data from api, had to loop backwards due to how the api sends its data
                     for (var i = dailyWeather.length - 1; i >= 0; i--) {
-                        //console.log(dailyWeather[i])
-                        var date = parseDate(dailyWeather[i].dt)
-                        var temp = newData.current.temp
-                        var high = dailyWeather[i].temp.max
-                        var low = dailyWeather[i].temp.min
-                        renderHtml(date, temp, high, low)
+                        // saving the weather array into a variable to extract the icons
+                        var weatherArray = dailyWeather[i].weather
+
+                        // looping through the weather array to extract the weather icons
+                        for(var j = 0; j < weatherArray.length; j++) {
+
+                            // setting up the variables for use in the render html function
+                            var weatherIcon = weatherArray[j].icon
+                            var date = parseDate(dailyWeather[i].dt)
+                            var temp = newData.current.temp
+                            var image = "http://openweathermap.org/img/w/" + weatherIcon + ".png"
+                            var high = dailyWeather[i].temp.max
+                            var low = dailyWeather[i].temp.min
+                            renderHtml(date, temp, image, high, low)
+
+                        }
+
                     }
                 })
             })
