@@ -1,5 +1,4 @@
 
-
 #map {
   /* the width and height may be set to any size */
   width: 100%;
@@ -16,10 +15,20 @@
   color: yellow;
   background-color: green;
 }
+
+h1 {
+  color: #333333;
+}
+
 h3 {
   background-color: #1B0F1C;
   opacity: 60%;
   border-radius: 10px;
+}
+
+h4 {
+  margin-left: 40%;
+  margin-top: 30px;
 }
 p {
   opacity: 80%;
@@ -28,7 +37,7 @@ p {
 .jumbotron {
   background-color: #1969B2;
   margin-bottom: -45px;
-  height: 458px;
+  height: 460px;
 }
 
 .card {
@@ -65,10 +74,12 @@ h1 {
 
 footer {
   background-color: #1969B2;
-  height: 65px;
-  display: flex;
-  justify-content: center;
+  height: 100px;
+  width: 100%;
   align-items: center;
   margin-top: 2px;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
 }
 

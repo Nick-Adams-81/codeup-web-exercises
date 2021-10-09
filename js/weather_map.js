@@ -37,7 +37,7 @@ $(document).ready(function () {
     // click sound effect used for button click
     var click = new Audio('audio/click.wav')
 
-    //api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}
+    // our initial get request from open weather map api to display data in pre selected location(Dallas)
     $.get('https://api.openweathermap.org/data/2.5/onecall', {
         lat: 32.7763,
         lon: -96.7969,
@@ -47,6 +47,7 @@ $(document).ready(function () {
 
         // setting up an empty array to push the data into
         var arr = []
+
         // pushing data to the empty array
         arr.push(data)
 
@@ -63,10 +64,10 @@ $(document).ready(function () {
                 var weatherArr = data.daily[i].weather
 
                 // looping through the weather data array to gain access to the weather icons
-                for(var j = 0; j < weatherArr.length; j++) {
+                for (var j = 0; j < weatherArr.length; j++) {
 
                     // setting up our variables to add to render html function
-                    var weatherIcon =  weatherArr[j].icon
+                    var weatherIcon = weatherArr[j].icon
                     var date = parseDate(data.daily[i].dt)
                     var temp = data.current.temp
                     var image = "http://openweathermap.org/img/w/" + weatherIcon + ".png"
@@ -84,7 +85,7 @@ $(document).ready(function () {
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v11',
-        zoom: 9.7,
+        zoom: 10,
         center: [-96.79107, 32.766540],
         dragRotate: true
     });
@@ -95,6 +96,7 @@ $(document).ready(function () {
         e.preventDefault()
         click.play()
         var input = $('#input').val()
+        if (input === null) alert('Please enter a city')
         geocode(input, mapboxApiKey)
             .then(function (data) {
                 map.flyTo({center: data})
@@ -116,7 +118,7 @@ $(document).ready(function () {
                         var weatherArray = dailyWeather[i].weather
 
                         // looping through the weather array to extract the weather icons
-                        for(var j = 0; j < weatherArray.length; j++) {
+                        for (var j = 0; j < weatherArray.length; j++) {
 
                             // setting up the variables for use in the render html function
                             var weatherIcon = weatherArray[j].icon
@@ -126,13 +128,10 @@ $(document).ready(function () {
                             var high = dailyWeather[i].temp.max
                             var low = dailyWeather[i].temp.min
                             renderHtml(date, temp, image, high, low)
-
                         }
 
                     }
                 })
             })
-
     })
-
 })
