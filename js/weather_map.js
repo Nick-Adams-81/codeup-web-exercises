@@ -80,7 +80,7 @@ $(document).ready(function () {
     })
 
 
-    // mapbox set up
+    // mapbox api set up
     mapboxgl.accessToken = mapboxApiKey;
     var map = new mapboxgl.Map({
         container: 'map',
@@ -95,8 +95,11 @@ $(document).ready(function () {
     $('#submit').click(function (e) {
         e.preventDefault()
         click.play()
+
+        // capturing user input and storing it in a variable
         var input = $('#input').val()
-        if (input === null) alert('Please enter a city')
+
+        // using the geocode function to get lat and lon coordinates of user input
         geocode(input, mapboxApiKey)
             .then(function (data) {
                 map.flyTo({center: data})
@@ -114,6 +117,7 @@ $(document).ready(function () {
 
                     // looping through daily weather to get data from api, had to loop backwards due to how the api sends its data
                     for (var i = dailyWeather.length - 1; i >= 0; i--) {
+
                         // saving the weather array into a variable to extract the icons
                         var weatherArray = dailyWeather[i].weather
 
