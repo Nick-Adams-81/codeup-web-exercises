@@ -124,7 +124,7 @@ $(document).ready(function () {
                         // looping through the weather array to extract the weather icons
                         for (var j = 0; j < weatherArray.length; j++) {
 
-                            // setting up the variables for use in the render html function
+                            // setting up variables for use in the render html function
                             var weatherIcon = weatherArray[j].icon
                             var date = parseDate(dailyWeather[i].dt)
                             var temp = newData.current.temp
@@ -133,7 +133,6 @@ $(document).ready(function () {
                             var low = dailyWeather[i].temp.min
                             renderHtml(date, temp, image, high, low)
                         }
-
                     }
                 })
             })
