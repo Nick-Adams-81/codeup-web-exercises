@@ -8,19 +8,19 @@
 <script>
     //~ * Map * ~
     //TODO Together: Let's see a common approach we might have done in the past: our goal is to increase each element of an array by 1 [element + 1], then get an array back with those values
-    var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    //var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
     var numbersAddOne = [];
 
-    for (var i = 0; i < numbers.length; i += 1) {
-        numbersAddOne.push(numbers[i] + 1);
-    }
+    // for (var i = 0; i < numbers.length; i += 1) {
+    //     numbersAddOne.push(numbers[i] + 1);
+    // }
     // console.log(numbersAddOne); // [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
     //TODO Together: Now, let's achieve the same result with the first part of our lesson: the MAP method~
 
-    let numbersAddOneMap = numbers.map(number => number + 1);
+    //let numbersAddOneMap = numbers.map(number => number + 1);
 
-    console.log(numbersAddOneMap);
+    //console.log(numbersAddOneMap);
     //As you can see, .map() accepts a callback function - that callback function is applied to each element in the collection. What about a dive into a deeper, more complicated collection?
     const favoriteRestaurants = [
         {
@@ -50,17 +50,17 @@
         {
             name: 'Beto and Son',
             address: '123 some road, Dallas, TX',
-            phone: "(111) 222 - 3345"
+            phone: "(111) 222-3345"
         },
         {
             name: 'Pizza hut',
             address: '456 some street, Dallas, TX',
-            phone: '(444) 555- 6789'
+            phone: '(444) 555-6789'
         },
         {
             name: 'twin peaks',
             address: '111 down some lane, Dallas, TX',
-            phone: '(999) 999- 9876'
+            phone: '(999) 999-9876'
         }
     ]
     //TODO: Now, having created a personal array of restaurant objects for yourself, use .map() to get your favorite restaurant's names out of that collection, into another array, and out into the console! ~5 mins
@@ -68,18 +68,23 @@
     console.log(mappedRestaurants)
     //~ * Filter * ~
     //TODO Together: Once again, let's take a look at the old way we might approach an issue: getting only one type of values out of an array (for example: even numbers only from an array of nums!)
-    // var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    //
-    // var evens = [];
-    //
-    // for (var i = 0; i < numbers.length; i += 1) {
-    //     if (numbers[i] % 2 === 0) {
-    //         evens.push(numbers[i]);
-    //     }
-    // }
-    // console.log(evens); // [2, 4, 6, 8, 10]
+    var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    var evens = [];
+
+    for (var i = 0; i < numbers.length; i += 1) {
+        if (numbers[i] % 2 === 0) {
+            evens.push(numbers[i]);
+        }
+    }
+    //console.log(evens); // [2, 4, 6, 8, 10]
     //TODO Together: Now, let's refactor the above using the ES6 .filter() method with the same goal: even numbers only!
+    let even = numbers.filter(number => number % 2 === 0)
+    console.log(even)
     //TODO Together: Using my favoriteRestaurants list, let's filter out all of the non-buffet restaurants
+
+    let hasBuffet = favoriteRestaurants.filter(restaurant => restaurant.restaurantFeatures.includes('buffet'))
+    console.log(hasBuffet)
     //TODO: Each one of your restaurant arrays is unique, but, in that array, identify something to filter by - it could be as simple as "well, let me filter out all of the restaurants with names shorter than 8 characters" or get as complicated as you'd like!
     // TODO: Once you've figured our what you want to filter, go ahead and write the necessary code to achieve what you wanted - remember to practice with .filter() and our ES6 verbiage!
     //~ * Reduce * ~
