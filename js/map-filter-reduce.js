@@ -49,7 +49,7 @@ console.log(yearsReduce);
 
 let userNames = users.reduce((total, people) => {
     return `Your instructors are:  ${people.name}  ${total}`
-}, 0)
+}, 1)
 console.log(userNames)
 
 

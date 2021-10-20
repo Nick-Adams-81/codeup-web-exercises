@@ -1,0 +1,22 @@
+'use strict';
+
+
+
+
+fetch('https://api.github.com/users/Nick-Adams-81/events/public',
+    {headers: {'Authorization': githubToken}})
+    .then(res => res.json())
+    .then(data => {
+        console.log(data[0])
+        data.results
+        console.log(data[0])
+    })
+
+
+
+
+const wait = (ms) => {
+    return new Promise(resolve => setTimeout(resolve, ms))
+}
+
+wait(3000).then(() => console.log('runs after 3 seconds'))
