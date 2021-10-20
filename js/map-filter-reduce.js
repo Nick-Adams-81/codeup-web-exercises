@@ -36,8 +36,20 @@ const users = [
     }
 ];
 
-let langsFilter = users.filter(person => person.languages.length >= 3)
+let langsFilter = users.filter(person => person.languages.length >= 3);
 console.log(langsFilter);
 
-let emailMap = users.map(person => person.email)
+let emailMap = users.map(person => person.email);
 console.log(emailMap);
+
+let yearsReduce = users.reduce((total, person) => {
+    return (total + person.yearsOfExperience)
+}, 0);
+console.log(yearsReduce);
+
+let userNames = users.reduce((total, people) => {
+    return `Your instructors are:  ${people.name}  ${total}`
+}, 0)
+console.log(userNames)
+
+
